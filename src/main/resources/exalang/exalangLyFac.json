@@ -1,0 +1,309 @@
+{
+  "name" : "exaLangLyFac",
+  "folderName" : "exalangLyFac",
+  "module" : [
+    {
+      "name" : "Module mémoire",
+      "questions": [
+        {
+          "number": 1,
+          "name": "Empan visuel",
+          "tests" : {
+            "DEFAULT" : [
+              {
+                "name" : "Score",
+                "max" : 8,
+                "average" : 5.82,
+                "ET" : 1.08
+              }
+            ]
+          }
+        },
+        {
+          "number": 2,
+          "name": "Empan endroit",
+          "tests" : {
+            "DEFAULT" : [
+              {
+                "name" : "Score",
+                "max" : 9,
+                "average" : 6.49,
+                "ET" : 1.12
+              }
+            ]
+          }
+        },
+        {
+          "number": 3,
+          "name": "Empan envers",
+          "tests" : {
+            "DEFAULT" : [
+              {
+                "name" : "Score",
+                "max" : 8,
+                "average" : 5.13,
+                "ET" : 1.29
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name" : "Module Langage élaboré",
+      "questions": [
+        {
+          "number": 4,
+          "name": "Flexibilité lexicale",
+          "tests" : {
+            "DEFAULT" : [
+              {
+                "name" : "Score",
+                "max" : 18,
+                "average" : 15.03,
+                "ET" : 2.22
+              },
+              {
+                "name" : "Temps",
+                "average" : 222.93,
+                "ET" : 58.15,
+                "isTime" : true
+              }
+            ]
+          }
+        },
+        {
+          "number": 5,
+          "name": "Repérage d’anaphores",
+          "tests" : {
+            "DEFAULT" : [
+              {
+                "name" : "Score",
+                "max" : 47,
+                "average" : 33.14,
+                "ET" : 7.57
+              },
+              {
+                "name" : "Temps",
+                "average" : 132.61,
+                "ET" : 35.96,
+                "isTime" : true
+              }
+            ]
+          }
+        },
+        {
+          "number": 6,
+          "name": "Consignes orales",
+          "tests" : {
+            "DEFAULT" : [
+              {
+                "name" : "Score",
+                "max" : 13,
+                "average" : 10.55,
+                "ET" : 1.45
+              }
+            ]
+          }
+        },
+        {
+          "number": 7,
+          "name": "Inférences",
+          "tests" : {
+            "DEFAULT" : [
+              {
+                "name" : "Score",
+                "max" : 13,
+                "average" : 10.13,
+                "ET" : 1.73
+              },
+              {
+                "name" : "Temps",
+                "average" : 238.03,
+                "ET" : 63.66,
+                "isTime" : true
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name" : "Module Lecture",
+      "questions": [
+        {
+          "number": 8,
+          "name": "Lecture de mots",
+          "tests" : {
+            "DEFAULT" : [
+              {
+                "name" : "Score",
+                "max" : 77,
+                "average" : 59.89,
+                "ET" : 7.01
+              }
+            ]
+          }
+        },
+        {
+          "number": 9,
+          "name": "Lecture de logatomes",
+          "tests" : {
+            "DEFAULT" : [
+              {
+                "name" : "Score",
+                "max" : 10,
+                "average" : 9.15,
+                "ET" : 0.78
+              },
+              {
+                "name" : "Temps",
+                "average" : 22.35,
+                "ET" : 4.57,
+                "isTime" : true
+              }
+            ]
+          }
+        },
+        {
+          "number": 10,
+          "name": "Leximétrie",
+          "tests" : {
+            "DEFAULT" : [
+              {
+                "name" : "Mots lus correctement",
+                "max" : 175,
+                "average" : 173.5,
+                "ET" : 3.26
+              },
+              {
+                "name" : "Note de temps pondérée",
+                "max" : 76,
+                "average" : 53.47,
+                "ET" : 7.63,
+                "isTime" : true
+              }
+            ]
+          }
+        },
+        {
+          "number": 11,
+          "name": "Compréhension de texte",
+          "tests" : {
+            "DEFAULT" : [
+              {
+                "name" : "Lecture silencieuse",
+                "average" : 182.03,
+                "ET" : 37.14,
+                "isTime" : true
+              },
+              {
+                "name" : "Score",
+                "max" : 18,
+                "average" : 14.16,
+                "ET" : 2.18
+              },
+              {
+                "name" : "Tps moyen/retour",
+                "max" : 93,
+                "average" : 33.02,
+                "ET" : 20.57,
+                "isTime" : true
+              }
+            ]
+          }
+        },
+        {
+          "number": 12,
+          "name": "Repérage",
+          "tests" : {
+            "DEFAULT" : [
+              {
+                "name" : "Score",
+                "max" : 10,
+                "average" : 7.65,
+                "ET" : 1.25
+              },
+              {
+                "name" : "Temps",
+                "average" : 156.19,
+                "ET" : 63.92,
+                "isTime" : true
+              },
+              {
+                "name" : "Tps moyen/bonne réponse",
+                "max" : 36,
+                "average" : 19.48,
+                "ET" : 7.24,
+                "isTime" : true
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name" : "Module Orthographe",
+      "questions": [
+        {
+          "number": 13,
+          "name": "Texte à choix multiple",
+          "tests" : {
+            "DEFAULT" : [
+              {
+                "name" : "Lexique",
+                "max" : 12,
+                "average" : 8.77,
+                "ET" : 1.77
+              },
+              {
+                "name" : "Grammaire",
+                "max" : 14,
+                "average" : 11.21,
+                "ET" : 1.78
+              },
+              {
+                "name" : "Temps",
+                "average" : 236.18,
+                "ET" : 59.8,
+                "isTime" : true
+              }
+            ]
+          }
+        },
+        {
+          "number": 14,
+          "name": "Phrases à compléter",
+          "tests" : {
+            "DEFAULT" : [
+              {
+                "name" : "Lexique",
+                "max" : 22,
+                "average" : 17.79,
+                "ET" : 2.45
+              },
+              {
+                "name" : "Grammaire",
+                "max" : 26,
+                "average" : 21.97,
+                "ET" : 2.81
+              },
+              {
+                "name" : "Orthographe lexicale",
+                "max" : 34,
+                "average" : 26.65,
+                "ET" : 3.35
+              },
+              {
+                "name" : "Orthographe grammaticale",
+                "max" : 40,
+                "average" : 33.84,
+                "ET" : 3.54
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

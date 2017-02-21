@@ -1,0 +1,1308 @@
+{
+  "name" : "exaLang811",
+  "folderName" : "exaLang811",
+  "module" : [
+    {
+      "name" : "Module phonologie, attention et mémoire",
+      "questions" : [
+        {
+          "number": 1,
+          "name": "Empan auditif endroit",
+          "tests" : {
+            "CE2" : [
+              {
+                "name" : "Score",
+                "max" : 7,
+                "average" : 4.96,
+                "ET" : 0.93
+              }
+            ],
+            "CM1" : [
+              {
+                "name" : "Score",
+                "max" : 7,
+                "average" : 5.04,
+                "ET" : 0.93
+              }
+            ],
+            "CM2" : [
+              {
+                "name" : "Score",
+                "max" : 7,
+                "average" : 5.33,
+                "ET" : 1.03
+              }
+            ]
+          }
+        },
+        {
+          "number": 2,
+          "name": "Empan auditif envers",
+          "tests" : {
+            "CE2" : [
+              {
+                "name" : "Score",
+                "max" : 6,
+                "average" : 3.66,
+                "ET" : 0.84
+              }
+            ],
+            "CM1" : [
+              {
+                "name" : "Score",
+                "max" : 6,
+                "average" : 3.87,
+                "ET" : 0.82
+              }
+            ],
+            "CM2" : [
+              {
+                "name" : "Score",
+                "max" : 6,
+                "average" : 4.18,
+                "ET" : 0.87
+              }
+            ]
+          }
+        },
+        {
+          "number": 3,
+          "name": "Empan visuel",
+          "tests" : {
+            "CE2" : [
+              {
+                "name" : "Score",
+                "max" : 5,
+                "average" : 4.46,
+                "ET" : 0.73
+              }
+            ],
+            "CM1" : [
+              {
+                "name" : "Score",
+                "max" : 5,
+                "average" : 4.58,
+                "ET" : 0.63
+              }
+            ],
+            "CM2" : [
+              {
+                "name" : "Score",
+                "max" : 5,
+                "average" : 4.78,
+                "ET" : 0.48
+              }
+            ]
+          }
+        },
+        {
+          "number": 4,
+          "name": "Répétition de logatomes",
+          "tests" : {
+            "CE2" : [
+              {
+                "name" : "Score",
+                "max" : 12,
+                "average" : 10.7,
+                "ET" : 1.37
+              }
+            ],
+            "CM1" : [
+              {
+                "name" : "Score",
+                "max" : 12,
+                "average" : 10.86,
+                "ET" : 1.26
+              }
+            ],
+            "CM2" : [
+              {
+                "name" : "Score",
+                "max" : 12,
+                "average" : 11.21,
+                "ET" : 0.98
+              }
+            ]
+          }
+        },
+        {
+          "number": 5,
+          "name": "Métaphonologie et MdT - traitement syllabique",
+          "tests" : {
+            "CE2" : [
+              {
+                "name" : "Score",
+                "max" : 11,
+                "average" : 9.52,
+                "ET" : 1.36
+              }
+            ],
+            "CM1" : [
+              {
+                "name" : "Score",
+                "max" : 11,
+                "average" : 10.2,
+                "ET" : 1.06
+              }
+            ],
+            "CM2" : [
+              {
+                "name" : "Score",
+                "max" : 11,
+                "average" : 10.34,
+                "ET" : 1.06
+              }
+            ]
+          }
+        },
+        {
+          "number": 6,
+          "name": "Métaphonologie et MdT - traitement phonémique",
+          "tests" : {
+            "CE2" : [
+              {
+                "name" : "Score",
+                "max" : 11,
+                "average" : 8.07,
+                "ET" : 2.12
+              }
+            ],
+            "CM1" : [
+              {
+                "name" : "Score",
+                "max" : 11,
+                "average" : 8.18,
+                "ET" : 2.04
+              }
+            ],
+            "CM2" : [
+              {
+                "name" : "Score",
+                "max" : 11,
+                "average" : 8.72,
+                "ET" : 1.72
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name" : "Module lexique",
+      "questions" : [
+        {
+          "number": 7,
+          "name": "Fluence phonémique",
+          "tests" : {
+            "CE2" : [
+              {
+                "name" : "Score",
+                "max" : 24,
+                "average" : 13.41,
+                "ET" : 4.67
+              }
+            ],
+            "CM1" : [
+              {
+                "name" : "Score",
+                "max" : 27,
+                "average" : 15.02,
+                "ET" : 4.7
+              }
+            ],
+            "CM2" : [
+              {
+                "name" : "Score",
+                "max" : 31,
+                "average" : 17.26,
+                "ET" : 5.52
+              }
+            ]
+          }
+        },
+        {
+          "number": 8,
+          "name": "Fluence sémantique",
+          "tests" : {
+            "CE2" : [
+              {
+                "name" : "Score",
+                "max" : 37,
+                "average" : 23.1,
+                "ET" : 5.44
+              }
+            ],
+            "CM1" : [
+              {
+                "name" : "Score",
+                "max" : 44,
+                "average" : 25.24,
+                "ET" : 7.35
+              }
+            ],
+            "CM2" : [
+              {
+                "name" : "Score",
+                "max" : 47,
+                "average" : 29.15,
+                "ET" : 6.92
+              }
+            ]
+          }
+        },
+        {
+          "number": 9,
+          "name": "Décision lexico-morphologique",
+          "tests" : {
+            "CE2" : [
+              {
+                "name" : "Score",
+                "max" : 11,
+                "average" : 10.22,
+                "ET" : 0.83
+              },
+              {
+                "name" : "Temps",
+                "average" : 114.01,
+                "ET" : 23.47,
+                "isTime" : true
+              }
+            ],
+            "CM1" : [
+              {
+                "name" : "Score",
+                "max" : 11,
+                "average" : 10.47,
+                "ET" : 0.71
+              },
+              {
+                "name" : "Temps",
+                "average" : 98.94,
+                "ET" : 21.55,
+                "isTime" : true
+              }
+            ],
+            "CM2" : [
+              {
+                "name" : "Score",
+                "max" : 11,
+                "average" : 10.7,
+                "ET" : 0.52
+              },
+              {
+                "name" : "Temps",
+                "average" : 88.53,
+                "ET" : 16.61,
+                "isTime" : true
+              }
+            ]
+          }
+        },
+        {
+          "number": 10,
+          "name": "Relations sémantiques",
+          "tests" : {
+            "CE2" : [
+              {
+                "name" : "Score",
+                "max" : 19,
+                "average" : 16.08,
+                "ET" : 1.75
+              },
+              {
+                "name" : "Temps",
+                "average" : 152.05,
+                "ET" : 34.07,
+                "isTime" : true
+              }
+            ],
+            "CM1" : [
+              {
+                "name" : "Score",
+                "max" : 19,
+                "average" : 16.88,
+                "ET" : 1.53
+              },
+              {
+                "name" : "Temps",
+                "average" : 138.71,
+                "ET" : 27.17,
+                "isTime" : true
+              }
+            ],
+            "CM2" : [
+              {
+                "name" : "Score",
+                "max" : 19,
+                "average" : 17.08,
+                "ET" : 1.71
+              },
+              {
+                "name" : "Temps",
+                "average" : 127.09,
+                "ET" : 21.58,
+                "isTime" : true
+              }
+            ]
+          }
+        },
+        {
+          "number": 11,
+          "name": "Catégorisation lexico-sémantique",
+          "tests" : {
+            "CE2" : [
+              {
+                "name" : "Score",
+                "max" : 13,
+                "average" : 11.03,
+                "ET" : 1.68
+              },
+              {
+                "name" : "Temps",
+                "average" : 120.91,
+                "ET" : 41.51,
+                "isTime" : true
+              }
+            ],
+            "CM1" : [
+              {
+                "name" : "Score",
+                "max" : 13,
+                "average" : 12.28,
+                "ET" : 0.88
+              },
+              {
+                "name" : "Temps",
+                "average" : 108.22,
+                "ET" : 35.81,
+                "isTime" : true
+              }
+            ],
+            "CM2" : [
+              {
+                "name" : "Score",
+                "max" : 13,
+                "average" : 12.3,
+                "ET" : 0.88
+              },
+              {
+                "name" : "Temps",
+                "average" : 92.11,
+                "ET" : 32.75,
+                "isTime" : true
+              }
+            ]
+          }
+        },
+        {
+          "number": 12,
+          "name": "Lexique mathématique",
+          "tests" : {
+            "CE2" : [
+              {
+                "name" : "Score",
+                "max" : 16,
+                "average" : 11.59,
+                "ET" : 2.28
+              }
+            ],
+            "CM1" : [
+              {
+                "name" : "Score",
+                "max" : 16,
+                "average" : 13.13,
+                "ET" : 2.51
+              }
+            ],
+            "CM2" : [
+              {
+                "name" : "Score",
+                "max" : 16,
+                "average" : 14.04,
+                "ET" : 1.57
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name" : "Module langage oral",
+      "questions" : [
+        {
+          "number": 13,
+          "name": "Complétion de phrases",
+          "tests" : {
+            "CE2" : [
+              {
+                "name" : "Score",
+                "max" : 12,
+                "average" : 9.82,
+                "ET" : 1.42
+              }
+            ],
+            "CM1" : [
+              {
+                "name" : "Score",
+                "max" : 12,
+                "average" : 10.18,
+                "ET" : 1.42
+              }
+            ],
+            "CM2" : [
+              {
+                "name" : "Score",
+                "max" : 12,
+                "average" : 10.94,
+                "ET" : 1.07
+              }
+            ]
+          }
+        },
+        {
+          "number": 14,
+          "name": "Compréhension de phrases",
+          "tests" : {
+            "CE2" : [
+              {
+                "name" : "Score",
+                "max" : 16,
+                "average" : 12.02,
+                "ET" : 1.92
+              }
+            ],
+            "CM1" : [
+              {
+                "name" : "Score",
+                "max" : 16,
+                "average" : 12.35,
+                "ET" : 1.96
+              }
+            ],
+            "CM2" : [
+              {
+                "name" : "Score",
+                "max" : 16,
+                "average" : 13.23,
+                "ET" : 1.82
+              }
+            ]
+          }
+        },
+        {
+          "number": 15,
+          "name": "Complétion imagée",
+          "tests" : {
+            "CE2" : [
+              {
+                "name" : "Score",
+                "max" : 13,
+                "average" : 10.34,
+                "ET" : 1.81
+              }
+            ],
+            "CM1" : [
+              {
+                "name" : "Score",
+                "max" : 13,
+                "average" : 11.11,
+                "ET" : 1.5
+              }
+            ],
+            "CM2" : [
+              {
+                "name" : "Score",
+                "max" : 13,
+                "average" : 11.72,
+                "ET" : 1.18
+              }
+            ]
+          }
+        },
+        {
+          "number": 16,
+          "name": "Compréhension de récit",
+          "tests" : {
+            "CE2" : [
+              {
+                "name" : "Rappel",
+                "max" : 27,
+                "average" : 18,
+                "ET" : 4.76
+              },
+              {
+                "name" : "Questions",
+                "max" : 14,
+                "average" : 10.61,
+                "ET" : 2.18
+              }
+            ],
+            "CM1" : [
+              {
+                "name" : "Rappel",
+                "max" : 27,
+                "average" : 18.35,
+                "ET" : 5.11
+              },
+              {
+                "name" : "Questions",
+                "max" : 14,
+                "average" : 10.93,
+                "ET" : 1.83
+              }
+            ],
+            "CM2" : [
+              {
+                "name" : "Rappel",
+                "max" : 27,
+                "average" : 20.12,
+                "ET" : 4.73
+              },
+              {
+                "name" : "Questions",
+                "max" : 14,
+                "average" : 11.4,
+                "ET" : 2.01
+              }
+            ]
+          }
+        },
+        {
+          "number": 17,
+          "name": "Jugement morphosyntaxique",
+          "tests" : {
+            "CE2" : [
+              {
+                "name" : "Score",
+                "max" : 24,
+                "average" : 17.27,
+                "ET" : 4.41
+              }
+            ],
+            "CM1" : [
+              {
+                "name" : "Score",
+                "max" : 24,
+                "average" : 19.06,
+                "ET" : 3.21
+              }
+            ],
+            "CM2" : [
+              {
+                "name" : "Score",
+                "max" : 24,
+                "average" : 21.35,
+                "ET" : 2.17
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name" : "Module lecture",
+      "questions" : [
+        {
+          "number": 18,
+          "name": "Lecture de mots",
+          "tests" : {
+            "CE2" : [
+              {
+                "name" : "Score",
+                "max" : 100,
+                "average" : 88.44,
+                "ET" : 11.09
+              },
+              {
+                "name" : "Temps",
+                "average" : 165.45,
+                "ET" : 18.98,
+                "isTime" : true
+              },
+              {
+                "name" : "Erreurs",
+                "max" : 85,
+                "average" : 54.64,
+                "ET" : 12.56
+              },
+              {
+                "name" : "Temps",
+                "average" : 5.53,
+                "ET" : 3.45,
+                "isTime" : true
+              }
+            ],
+            "CM1" : [
+              {
+                "name" : "Score",
+                "max" : 100,
+                "average" : 95.91,
+                "ET" : 4.21
+              },
+              {
+                "name" : "Temps",
+                "average" : 146.67,
+                "ET" : 22.99,
+                "isTime" : true
+              },
+              {
+                "name" : "Erreurs",
+                "max" : 102,
+                "average" : 68.89,
+                "ET" : 12.2
+              },
+              {
+                "name" : "Temps",
+                "average" : 3.6,
+                "ET" : 2.88,
+                "isTime" : true
+              }
+            ],
+            "CM2" : [
+              {
+                "name" : "Score",
+                "max" : 100,
+                "average" : 97.6,
+                "ET" : 2.39
+              },
+              {
+                "name" : "Temps",
+                "average" : 136.06,
+                "ET" : 23.15,
+                "isTime" : true
+              },
+              {
+                "name" : "Erreurs",
+                "max" : 113.64,
+                "average" : 75.09,
+                "ET" : 13.06
+              },
+              {
+                "name" : "Temps",
+                "average" : 2.4,
+                "ET" : 2.23,
+                "isTime" : true
+              }
+            ]
+          }
+        },
+        {
+          "number": 19,
+          "name": "Lecture de non-mots",
+          "tests" : {
+            "CE2" : [
+              {
+                "name" : "Score",
+                "max" : 16,
+                "average" : 14.64,
+                "ET" : 1.42
+              },
+              {
+                "name" : "Temps",
+                "average" : 45.11,
+                "ET" : 10.82,
+                "isTime" : true
+              },
+              {
+                "name" : "Erreurs",
+                "max" : 57,
+                "average" : 34.94,
+                "ET" : 9.56
+              }
+            ],
+            "CM1" : [
+              {
+                "name" : "Score",
+                "max" : 16,
+                "average" : 14.79,
+                "ET" : 1.25
+              },
+              {
+                "name" : "Temps",
+                "average" : 40.48,
+                "ET" : 8.86,
+                "isTime" : true
+              },
+              {
+                "name" : "Erreurs",
+                "max" : 62,
+                "average" : 38.93,
+                "ET" : 9.79
+              }
+            ],
+            "CM2" : [
+              {
+                "name" : "Score",
+                "max" : 16,
+                "average" : 15.38,
+                "ET" : 0.83
+              },
+              {
+                "name" : "Temps",
+                "average" : 35.13,
+                "ET" : 6.92,
+                "isTime" : true
+              },
+              {
+                "name" : "Erreurs",
+                "max" : 84.21,
+                "average" : 46.26,
+                "ET" : 10.73
+              }
+            ]
+          }
+        },
+        {
+          "number": 20,
+          "name": "Leximétrie",
+          "tests" : {
+            "CE2" : [
+              {
+                "name" : "Temps",
+                "average" : 95.44,
+                "ET" : 28.85,
+                "isTime" : true
+              },
+              {
+                "name" : "Mots lus correctement",
+                "max" : 153,
+                "average" : 149.76,
+                "ET" : 2.72
+              },
+              {
+                "name" : "Note pondérée",
+                "average" : 100.8,
+                "ET" : 30.33,
+                "isReversed" : true
+              }
+            ],
+            "CM1" : [
+              {
+                "name" : "Temps",
+                "average" : 78.7,
+                "ET" : 19.14,
+                "isTime" : true
+              },
+              {
+                "name" : "Mots lus correctement",
+                "max" : 153,
+                "average" : 150.81,
+                "ET" : 2.31
+              },
+              {
+                "name" : "Note pondérée",
+                "average" : 82.25,
+                "ET" : 20.78,
+                "isReversed" : true
+              }
+            ],
+            "CM2" : [
+              {
+                "name" : "Temps",
+                "average" : 68.77,
+                "ET" : 14.12,
+                "isTime" : true
+              },
+              {
+                "name" : "Mots lus correctement",
+                "max" : 153,
+                "average" : 151.3,
+                "ET" : 1.99
+              },
+              {
+                "name" : "Note pondérée",
+                "average" : 72.08,
+                "ET" : 16.04,
+                "isReversed" : true
+              }
+            ]
+          }
+        },
+        {
+          "number": 21,
+          "name": "Compréhension de phrases en images",
+          "tests" : {
+            "CE2" : [
+              {
+                "name" : "Score",
+                "max" : 12,
+                "average" : 9.63,
+                "ET" : 1.59
+              },
+              {
+                "name" : "Temps",
+                "average" : 201.15,
+                "ET" : 43.2,
+                "isTime" : true
+              },
+              {
+                "name" : "Erreurs",
+                "max" : 9,
+                "average" : 5.01,
+                "ET" : 1.49
+              }
+            ],
+            "CM1" : [
+              {
+                "name" : "Score",
+                "max" : 12,
+                "average" : 9.72,
+                "ET" : 1.53
+              },
+              {
+                "name" : "Temps",
+                "average" : 176.37,
+                "ET" : 36.56,
+                "isTime" : true
+              },
+              {
+                "name" : "Erreurs",
+                "max" : 9,
+                "average" : 5.71,
+                "ET" : 1.38
+              }
+            ],
+            "CM2" : [
+              {
+                "name" : "Score",
+                "max" : 12,
+                "average" : 10.18,
+                "ET" : 1.44
+              },
+              {
+                "name" : "Temps",
+                "average" : 156.43,
+                "ET" : 31.25,
+                "isTime" : true
+              },
+              {
+                "name" : "Erreurs",
+                "max" : 11.34,
+                "average" : 6.82,
+                "ET" : 1.83
+              }
+            ]
+          }
+        },
+        {
+          "number": 22,
+          "name": "Compréhension de texte",
+          "tests" : {
+            "CE2" : [
+              {
+                "name" : "Score",
+                "max" : 12,
+                "average" : 7.61,
+                "ET" : 2.04
+              }
+            ],
+            "CM1" : [
+              {
+                "name" : "Score",
+                "max" : 12,
+                "average" : 7.84,
+                "ET" : 1.99
+              }
+            ],
+            "CM2" : [
+              {
+                "name" : "Score",
+                "max" : 12,
+                "average" : 9.16,
+                "ET" : 1.84
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name" : "Module orthographe",
+      "questions" : [
+        {
+          "number": 23,
+          "name": "Complétion de phrases",
+          "tests" : {
+            "CE2" : [
+              {
+                "name" : "Score",
+                "max" : 12,
+                "average" : 5.61,
+                "ET" : 2.35
+              }
+            ],
+            "CM1" : [
+              {
+                "name" : "Score",
+                "max" : 12,
+                "average" : 6.7,
+                "ET" : 2.46
+              }
+            ],
+            "CM2" : [
+              {
+                "name" : "Score",
+                "max" : 12,
+                "average" : 8.09,
+                "ET" : 2.42
+              }
+            ]
+          }
+        },
+        {
+          "number": 24,
+          "name": "Jugement lexical orthographique",
+          "tests" : {
+            "CE2" : [
+              {
+                "name" : "Score",
+                "max" : 24,
+                "average" : 19.55,
+                "ET" : 3.3
+              },
+              {
+                "name" : "Temps",
+                "average" : 199,
+                "ET" : 56.14,
+                "isTime" : true
+              },
+              {
+                "name" : "Erreurs",
+                "max" : 19,
+                "average" : 10.55,
+                "ET" : 3.65
+              }
+            ],
+            "CM1" : [
+              {
+                "name" : "Score",
+                "max" : 24,
+                "average" : 21.5,
+                "ET" : 1.93
+              },
+              {
+                "name" : "Temps",
+                "average" : 161.75,
+                "ET" : 43.29,
+                "isTime" : true
+              },
+              {
+                "name" : "Erreurs",
+                "max" : 27,
+                "average" : 14.41,
+                "ET" : 4.33
+              }
+            ],
+            "CM2" : [
+              {
+                "name" : "Score",
+                "max" : 24,
+                "average" : 22.25,
+                "ET" : 1.63
+              },
+              {
+                "name" : "Temps",
+                "average" : 152.46,
+                "ET" : 38.19,
+                "isTime" : true
+              },
+              {
+                "name" : "Erreurs",
+                "max" : 30.67,
+                "average" : 15.71,
+                "ET" : 4.47
+              }
+            ]
+          }
+        },
+        {
+          "number": 25,
+          "name": "Correction de phrases",
+          "tests" : {
+            "CE2" : [
+              {
+                "name" : "Repérage",
+                "max" : 14,
+                "average" : 7.51,
+                "ET" : 2.37
+              },
+              {
+                "name" : "Temps",
+                "average" : 214.1,
+                "ET" : 67.7,
+                "isTime" : true
+              },
+              {
+                "name" : "Correction",
+                "max" : 14,
+                "average" : 9.93,
+                "ET" : 2.13
+              }
+            ],
+            "CM1" : [
+              {
+                "name" : "Repérage",
+                "max" : 14,
+                "average" : 8.74,
+                "ET" : 2.39
+              },
+              {
+                "name" : "Temps",
+                "average" : 186.07,
+                "ET" : 58.71,
+                "isTime" : true
+              },
+              {
+                "name" : "Correction",
+                "max" : 14,
+                "average" : 11.13,
+                "ET" : 1.77
+              }
+            ],
+            "CM2" : [
+              {
+                "name" : "Repérage",
+                "max" : 14,
+                "average" : 10.43,
+                "ET" : 2.07
+              },
+              {
+                "name" : "Temps",
+                "average" : 180.2,
+                "ET" : 64.11,
+                "isTime" : true
+              },
+              {
+                "name" : "Correction",
+                "max" : 14,
+                "average" : 11.94,
+                "ET" : 1.38
+              }
+            ]
+          }
+        },
+        {
+          "number": 26,
+          "name": "Closure de texte",
+          "tests" : {
+            "CE2" : [
+              {
+                "name" : "Phonologie",
+                "max" : 22,
+                "average" : 19.93,
+                "ET" : 1.84
+              },
+              {
+                "name" : "Lexical",
+                "max" : 22,
+                "average" : 17.16,
+                "ET" : 2.98
+              },
+              {
+                "name" : "Grammatical",
+                "max" : 22,
+                "average" : 12.34,
+                "ET" : 4.24
+              }
+            ],
+            "CM1" : [
+              {
+                "name" : "Phonologie",
+                "max" : 22,
+                "average" : 20.48,
+                "ET" : 1.47
+              },
+              {
+                "name" : "Lexical",
+                "max" : 22,
+                "average" : 18.63,
+                "ET" : 2.71
+              },
+              {
+                "name" : "Grammatical",
+                "max" : 22,
+                "average" : 14.46,
+                "ET" : 4.76
+              }
+            ],
+            "CM2" : [
+              {
+                "name" : "Phonologie",
+                "max" : 22,
+                "average" : 21.23,
+                "ET" : 1.05
+              },
+              {
+                "name" : "Lexical",
+                "max" : 22,
+                "average" : 20.08,
+                "ET" : 1.97
+              },
+              {
+                "name" : "Grammatical",
+                "max" : 22,
+                "average" : 17.71,
+                "ET" : 3.13
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name" : "Module compétences transversales",
+      "questions" : [
+        {
+          "number": 27,
+          "name": "Compréhension écrite d'un itinéraire",
+          "tests" : {
+            "CE2" : [
+              {
+                "name" : "Score",
+                "max" : 10,
+                "average" : 6.29,
+                "ET" : 2.22
+              }
+            ],
+            "CM1" : [
+              {
+                "name" : "Score",
+                "max" : 10,
+                "average" : 6.97,
+                "ET" : 1.67
+              }
+            ],
+            "CM2" : [
+              {
+                "name" : "Score",
+                "max" : 10,
+                "average" : 7.54,
+                "ET" : 1.98
+              }
+            ]
+          }
+        },
+        {
+          "number": 28,
+          "name": "Traitement visuo-spatial",
+          "tests" : {
+            "CE2" : [
+              {
+                "name" : "Score",
+                "max" : 11,
+                "average" : 7.39,
+                "ET" : 2.33
+              }
+            ],
+            "CM1" : [
+              {
+                "name" : "Score",
+                "max" : 11,
+                "average" : 8.01,
+                "ET" : 2.36
+              }
+            ],
+            "CM2" : [
+              {
+                "name" : "Score",
+                "max" : 11,
+                "average" : 9.01,
+                "ET" : 1.66
+              }
+            ]
+          }
+        },
+        {
+          "number": 29,
+          "name": "Dénomination rapide automatisée",
+          "tests" : {
+            "CE2" : [
+              {
+                "name" : "Score",
+                "max" : 150,
+                "average" : 103.6,
+                "ET" : 17.71
+              }
+            ],
+            "CM1" : [
+              {
+                "name" : "Score",
+                "max" : 164,
+                "average" : 113.4,
+                "ET" : 22.5
+              }
+            ],
+            "CM2" : [
+              {
+                "name" : "Score",
+                "max" : 163.6,
+                "average" : 124.34,
+                "ET" : 18.53
+              }
+            ]
+          }
+        },
+        {
+          "number": 30,
+          "name": "Habiletés pragmatiques et discursives",
+          "tests" : {
+            "CE2" : [
+              {
+                "name" : "Score",
+                "max" : 39,
+                "average" : 29.55,
+                "ET" : 4.19
+              }
+            ],
+            "CM1" : [
+              {
+                "name" : "Score",
+                "max" : 39,
+                "average" : 30.56,
+                "ET" : 4.09
+              }
+            ],
+            "CM2" : [
+              {
+                "name" : "Score",
+                "max" : 39,
+                "average" : 33.4,
+                "ET" : 3.23
+              }
+            ]
+          }
+        },
+        {
+          "number": 31,
+          "name": "Screening logico-mathématique",
+          "tests" : {
+            "CE2" : [
+              {
+                "name" : "Score",
+                "max" : 12,
+                "average" : 8.32,
+                "ET" : 1.88
+              }
+            ],
+            "CM1" : [
+              {
+                "name" : "Score",
+                "max" : 12,
+                "average" : 8.98,
+                "ET" : 1.83
+              }
+            ],
+            "CM2" : [
+              {
+                "name" : "Score",
+                "max" : 12,
+                "average" : 10.07,
+                "ET" : 1.41
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
