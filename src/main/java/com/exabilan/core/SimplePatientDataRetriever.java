@@ -2,7 +2,6 @@ package com.exabilan.core;
 
 import static java.util.Arrays.stream;
 import static java.util.stream.Collectors.joining;
-import static com.google.common.base.Throwables.propagate;
 import static com.google.common.collect.Maps.immutableEntry;
 
 import java.io.File;
@@ -70,7 +69,8 @@ public class SimplePatientDataRetriever implements PatientDataRetriever {
             return generateResults(
                     exaLang, prepareDocument(exaLang).getElementsByTagName("profil"));
         } catch (Exception e) {
-            throw propagate(e);
+            // This version of exalang is not installed on this person's system
+            return ImmutableMultimap.of();
         }
     }
 
