@@ -15,7 +15,7 @@ import com.exabilan.interfaces.ConfigurationReader;
 import com.exabilan.interfaces.ContentGenerator;
 import com.exabilan.interfaces.ExalangManager;
 import com.exabilan.interfaces.FileGenerator;
-import com.exabilan.interfaces.PatientDataRetriever;
+import com.exabilan.interfaces.PatientDataParser;
 import com.exabilan.types.exalang.Bilan;
 import com.exabilan.types.exalang.ExaLang;
 import com.exabilan.types.structure.Document;
@@ -25,7 +25,7 @@ import org.apache.poi.xwpf.usermodel.XWPFDocument;
 public class AllBilansGenerator {
     private final ContentGenerator contentGenerator;
     private final FileGenerator fileGenerator;
-    private final PatientDataRetriever patientDataRetriever;
+    private final PatientDataParser patientDataParser;
     private final ExalangManager exalangManager;
     private final ConfigurationReader configurationReader;
 
@@ -33,12 +33,12 @@ public class AllBilansGenerator {
     public AllBilansGenerator(
             ContentGenerator contentGenerator,
             FileGenerator fileGenerator,
-            PatientDataRetriever patientDataRetriever,
+            PatientDataParser patientDataParser,
             ExalangManager exalangManager,
             ConfigurationReader configurationReader) {
         this.contentGenerator = contentGenerator;
         this.fileGenerator = fileGenerator;
-        this.patientDataRetriever = patientDataRetriever;
+        this.patientDataParser = patientDataParser;
         this.exalangManager = exalangManager;
         this.configurationReader = configurationReader;
     }
@@ -78,7 +78,7 @@ public class AllBilansGenerator {
     }
 
     private List<Bilan> extractBilans(ExaLang exaLang) {
-        return patientDataRetriever.retrieveData(exaLang).asMap().entrySet().stream()
+        return patientDataParser.retrieveData(exaLang).asMap().entrySet().stream()
                 .map(entry -> entry.getValue()
                         .stream()
                         .map(result -> new Bilan(

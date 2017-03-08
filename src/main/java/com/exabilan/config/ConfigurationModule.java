@@ -9,15 +9,17 @@ import com.exabilan.component.SummaryTable;
 import com.exabilan.core.JacksonExalangManager;
 import com.exabilan.core.ListWithTableDocument;
 import com.exabilan.core.SimpleConfigurationReader;
-import com.exabilan.core.XWPFFileGenerator;
-import com.exabilan.core.SimplePatientDataRetriever;
+import com.exabilan.core.SimplePatientDataParser;
 import com.exabilan.core.SimpleResultAssociator;
+import com.exabilan.core.StandardDataRetriever;
+import com.exabilan.core.XWPFFileGenerator;
 import com.exabilan.interfaces.ConfigurationReader;
 import com.exabilan.interfaces.ContentGenerator;
+import com.exabilan.interfaces.DocumentPatientDataRetriever;
 import com.exabilan.interfaces.ExalangManager;
 import com.exabilan.interfaces.FileGenerator;
 import com.exabilan.interfaces.HighLevelComponent;
-import com.exabilan.interfaces.PatientDataRetriever;
+import com.exabilan.interfaces.PatientDataParser;
 import com.exabilan.interfaces.ResultAssociator;
 import com.google.common.collect.ImmutableList;
 import com.google.inject.AbstractModule;
@@ -30,10 +32,11 @@ public class ConfigurationModule extends AbstractModule {
     public void configure() {
         bind(FileGenerator.class).to(XWPFFileGenerator.class).asEagerSingleton();
         bind(ContentGenerator.class).to(ListWithTableDocument.class).asEagerSingleton();
-        bind(PatientDataRetriever.class).to(SimplePatientDataRetriever.class).asEagerSingleton();
+        bind(PatientDataParser.class).to(SimplePatientDataParser.class).asEagerSingleton();
         bind(ExalangManager.class).to(JacksonExalangManager.class).asEagerSingleton();
         bind(ResultAssociator.class).to(SimpleResultAssociator.class).asEagerSingleton();
         bind(ConfigurationReader.class).to(SimpleConfigurationReader.class).asEagerSingleton();
+        bind(DocumentPatientDataRetriever.class).to(StandardDataRetriever.class).asEagerSingleton();
     }
 
     @Provides @Singleton @Named("exalangNames")

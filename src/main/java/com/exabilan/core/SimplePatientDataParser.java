@@ -4,22 +4,16 @@ import static java.util.Arrays.stream;
 import static java.util.stream.Collectors.joining;
 import static com.google.common.collect.Maps.immutableEntry;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.Reader;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Map.Entry;
+import java.util.Optional;
 
 import javax.inject.Inject;
-import javax.inject.Named;
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
 
-import com.exabilan.interfaces.PatientDataRetriever;
+import com.exabilan.interfaces.DocumentPatientDataRetriever;
+import com.exabilan.interfaces.PatientDataParser;
 import com.exabilan.interfaces.ResultAssociator;
 import com.exabilan.types.exalang.Answer;
 import com.exabilan.types.exalang.ExaLang;
@@ -35,10 +29,8 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
-import org.xml.sax.InputSource;
-import org.xml.sax.SAXException;
 
-public class SimplePatientDataRetriever implements PatientDataRetriever {
+public class SimplePatientDataParser implements PatientDataParser {
 
     private static String PRENOM = "prenom";
     private static String NOM = "nom";
@@ -50,39 +42,27 @@ public class SimplePatientDataRetriever implements PatientDataRetriever {
     private static String REPONSE = "Reponse";
     private static String CLASSE = "classe";
 
-    private static String ISO_CHARSET = "iso-8859-1"; // Charset used by exalang when storing patients' results
     private static DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy"); // format used by exalang when storing dates
 
     private final ResultAssociator resultAssociator;
-    private final String folderRoot;
+    private final DocumentPatientDataRetriever documentPatientDataRetriever;
 
     @Inject
-    public SimplePatientDataRetriever(
-            ResultAssociator resultAssociator, @Named("profFolder") String folderRoot) {
+    public SimplePatientDataParser(
+            ResultAssociator resultAssociator,
+            DocumentPatientDataRetriever documentPatientDataRetriever) {
         this.resultAssociator = resultAssociator;
-        this.folderRoot = folderRoot;
+        this.documentPatientDataRetriever = documentPatientDataRetriever;
     }
 
     @Override
     public ImmutableMultimap<Patient, Results> retrieveData(ExaLang exaLang) {
-        try {
-            return generateResults(
-                    exaLang, prepareDocument(exaLang).getElementsByTagName("profil"));
-        } catch (Exception e) {
-            // This version of exalang is not installed on this person's system
+        Optional<Document> document = documentPatientDataRetriever.retrieveDocument(exaLang);
+
+        if (document.isPresent()) {
+            return generateResults(exaLang, document.get().getElementsByTagName("profil"));
+        } else {
             return ImmutableMultimap.of();
-        }
-    }
-
-    private Document prepareDocument(ExaLang exaLang) throws ParserConfigurationException, SAXException, IOException {
-        try (Reader reader = new InputStreamReader(
-                new FileInputStream(getFile(exaLang)), ISO_CHARSET)) {
-            Document document = DocumentBuilderFactory.newInstance().newDocumentBuilder()
-                    .parse(new InputSource(reader));
-
-            document.getDocumentElement().normalize();
-
-            return document;
         }
     }
 
@@ -157,10 +137,4 @@ public class SimplePatientDataRetriever implements PatientDataRetriever {
         return done ? resultAssociator.parseAnswer(answer) : ImmutableList.of();
     }
 
-    private File getFile(ExaLang exalang) {
-        return new File(String.format(
-                "%s/com.happyneuron.hnpro/%s/files/prof.xml",
-                folderRoot,
-                exalang.getFolderName()));
-    }
 }

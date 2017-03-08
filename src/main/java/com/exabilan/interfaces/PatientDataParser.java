@@ -6,7 +6,7 @@ import com.exabilan.types.exalang.ExaLang;
 import com.exabilan.types.exalang.Patient;
 import com.exabilan.types.exalang.Results;
 
-public interface PatientDataRetriever {
+public interface PatientDataParser {
 
     /**
      * For a given {@class Exalang}, retrieves all the patients' results
