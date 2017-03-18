@@ -5,6 +5,8 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 @JsonFormat(shape = JsonFormat.Shape.OBJECT)
 public enum Level {
     DEFAULT("undefined"),
+    PSM("PSM"),
+    MSM("MSM"),
     GSM("GSM"),
     CP("CP"),
     CE1("CE1"),
@@ -14,7 +16,13 @@ public enum Level {
     SIXIEME("6"),
     CINQUIEME("5"),
     QUATRIEME("4"),
-    TROISIEME("3");
+    TROISIEME("3"),
+    TROIS_ANS("3ans"),
+    TROIS_ANS_DEMI("3ans6"),
+    QUATRE_ANS("4ans"),
+    QUATRE_ANS_DEMI("4ans6"),
+    CINQ_ANS("5ans"),
+    CINQ_ANS_DEMI("5ans6");
 
     private final String level;
     Level(String level) {
