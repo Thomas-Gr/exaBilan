@@ -10,6 +10,9 @@ import static com.exabilan.component.helper.Styles.TITLE;
 import java.util.List;
 import java.util.Map;
 
+import javax.inject.Inject;
+
+import com.exabilan.core.LevelGetter;
 import com.exabilan.interfaces.HighLevelComponent;
 import com.exabilan.interfaces.Section;
 import com.exabilan.types.exalang.Answer;
@@ -23,9 +26,16 @@ import com.google.common.collect.ImmutableList;
 
 public class ResultList implements HighLevelComponent {
 
+    private final LevelGetter levelGetter;
+
+    @Inject
+    public ResultList(LevelGetter levelGetter) {
+        this.levelGetter = levelGetter;
+    }
+
     @Override
     public ImmutableList<Section> generateItem(Bilan bilan) {
-        Level level = bilan.getPatient().getLevel();
+        Level level = levelGetter.getActualLevel(bilan.getExalang(), bilan.getPatient());
         ImmutableList.Builder<Section> result = ImmutableList.builder();
 
         result.add(new Paragraph()
@@ -76,9 +86,13 @@ public class ResultList implements HighLevelComponent {
                             statistic.isTime() ? "s" : "",
                             level.name()));
                 } else {
+                    double actualResult = statistic.isError()
+                            ? statistic.getMaximum() - answer.getResult()
+                            : answer.getResult();
+
                     scores.addText(String.format(
                             "%s%s, la moyenne se situe à M = %s%s.",
-                            displayNumber(answer.getResult()),
+                            displayNumber(actualResult),
                             statistic.isTime() ? "s" : "/" + displayNumber(statistic.getMaximum()),
                             displayNumber(statistic.getAverage()),
                             statistic.isTime() ? "s" : ""));

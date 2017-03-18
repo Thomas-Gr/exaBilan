@@ -11,11 +11,9 @@ import com.exabilan.core.ListWithTableDocument;
 import com.exabilan.core.SimpleConfigurationReader;
 import com.exabilan.core.SimplePatientDataParser;
 import com.exabilan.core.SimpleResultAssociator;
-import com.exabilan.core.StandardDataRetriever;
 import com.exabilan.core.XWPFFileGenerator;
 import com.exabilan.interfaces.ConfigurationReader;
 import com.exabilan.interfaces.ContentGenerator;
-import com.exabilan.interfaces.DocumentPatientDataRetriever;
 import com.exabilan.interfaces.ExalangManager;
 import com.exabilan.interfaces.FileGenerator;
 import com.exabilan.interfaces.HighLevelComponent;
@@ -36,12 +34,11 @@ public class ConfigurationModule extends AbstractModule {
         bind(ExalangManager.class).to(JacksonExalangManager.class).asEagerSingleton();
         bind(ResultAssociator.class).to(SimpleResultAssociator.class).asEagerSingleton();
         bind(ConfigurationReader.class).to(SimpleConfigurationReader.class).asEagerSingleton();
-        bind(DocumentPatientDataRetriever.class).to(StandardDataRetriever.class).asEagerSingleton();
     }
 
     @Provides @Singleton @Named("exalangNames")
     public ImmutableList<String> getExalangNames() {
-        return ImmutableList.of("exalangLyFac", "exalang58", "exalang811", "exalang1115");
+        return ImmutableList.of("exalangLyFac", "exalang36", "exalang58", "exalang811", "exalang1115");
     }
 
     @Provides @Singleton

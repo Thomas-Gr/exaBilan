@@ -10,11 +10,14 @@ import static com.exabilan.component.helper.Styles.ORANGE;
 import static com.exabilan.component.helper.Styles.PURPLE;
 import static com.exabilan.component.helper.Styles.RED;
 
-import java.awt.*;
+import java.awt.Color;
 import java.util.List;
 import java.util.Map;
 
+import javax.inject.Inject;
+
 import com.exabilan.component.helper.Styles;
+import com.exabilan.core.LevelGetter;
 import com.exabilan.interfaces.HighLevelComponent;
 import com.exabilan.interfaces.Section;
 import com.exabilan.types.exalang.Answer;
@@ -35,9 +38,16 @@ public class SummaryTable implements HighLevelComponent {
             PURPLE, RED, BLUE, GREEN, ORANGE, BLUE_2,
             PURPLE, RED, BLUE, GREEN, ORANGE, BLUE_2);
 
+    private final LevelGetter levelGetter;
+
+    @Inject
+    public SummaryTable(LevelGetter levelGetter) {
+        this.levelGetter = levelGetter;
+    }
+
     @Override
     public ImmutableList<Section> generateItem(Bilan bilan) {
-        Level level = bilan.getPatient().getLevel();
+        Level level = levelGetter.getActualLevel(bilan.getExalang(), bilan.getPatient());
         ImmutableList.Builder<Section> result = ImmutableList.builder();
 
         result.add(new Paragraph()
@@ -114,15 +124,19 @@ public class SummaryTable implements HighLevelComponent {
                     averageCell.withParagraphStyle(CENTERED).addText("/");
                     zScoreCell.withParagraphStyle(CENTERED).addText("/");
                 } else {
+                    double actualResult = statistic.isError()
+                            ? statistic.getMaximum() - answer.getResult()
+                            : answer.getResult();
+
                     resultCell.withParagraphStyle(CENTERED)
-                            .addText(displayNumber(answer.getResult()))
+                            .addText(displayNumber(actualResult))
                             .addText(statistic.isTime() ? "s" : "/" + displayNumber(statistic.getMaximum()));
 
                     averageCell.withParagraphStyle(CENTERED)
                             .addText(displayNumber(statistic.getAverage()))
                             .addText(statistic.isTime() ? "s" : "");
 
-                    double value = computeZScore(answer.getResult(), statistic);
+                    double value = computeZScore(actualResult, statistic);
 
                     zScoreCell
                             .withParagraphStyle(CENTERED)

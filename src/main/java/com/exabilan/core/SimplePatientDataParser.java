@@ -12,7 +12,6 @@ import java.util.Optional;
 
 import javax.inject.Inject;
 
-import com.exabilan.interfaces.DocumentPatientDataRetriever;
 import com.exabilan.interfaces.PatientDataParser;
 import com.exabilan.interfaces.ResultAssociator;
 import com.exabilan.types.exalang.Answer;
@@ -45,19 +44,19 @@ public class SimplePatientDataParser implements PatientDataParser {
     private static DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy"); // format used by exalang when storing dates
 
     private final ResultAssociator resultAssociator;
-    private final DocumentPatientDataRetriever documentPatientDataRetriever;
+    private final ParserBinder parserBinder;
 
     @Inject
     public SimplePatientDataParser(
             ResultAssociator resultAssociator,
-            DocumentPatientDataRetriever documentPatientDataRetriever) {
+            ParserBinder parserBinder) {
         this.resultAssociator = resultAssociator;
-        this.documentPatientDataRetriever = documentPatientDataRetriever;
+        this.parserBinder = parserBinder;
     }
 
     @Override
     public ImmutableMultimap<Patient, Results> retrieveData(ExaLang exaLang) {
-        Optional<Document> document = documentPatientDataRetriever.retrieveDocument(exaLang);
+        Optional<Document> document = parserBinder.getParser(exaLang).retrieveDocument(exaLang);
 
         if (document.isPresent()) {
             return generateResults(exaLang, document.get().getElementsByTagName("profil"));
@@ -130,7 +129,9 @@ public class SimplePatientDataParser implements PatientDataParser {
     }
 
     private static String extractAttribute(Node node, String attributeName) {
-        return node.getAttributes().getNamedItem(attributeName).getNodeValue();
+        Node namedItem = node.getAttributes().getNamedItem(attributeName);
+
+        return namedItem == null ? "" : namedItem.getNodeValue();
     }
 
     private List<Answer> getPotentialAnswer(boolean done, String answer) {
