@@ -28,6 +28,7 @@ public class SimpleResultAssociator implements ResultAssociator {
     public List<Answer> parseAnswer(String result) {
         return Arrays.stream(result.split(";"))
                 .filter(value -> !value.equals("A"))
+                .filter(value -> !value.equals("B"))
                 .map(Double::valueOf)
                 .map(Answer::new)
                 .collect(toList());
