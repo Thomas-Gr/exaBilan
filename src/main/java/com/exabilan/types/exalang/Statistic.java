@@ -14,6 +14,7 @@ public class Statistic {
     boolean isTime;
     boolean isReversed;
     boolean isInvalid;
+    boolean isError;
 
     @JsonCreator
     public Statistic(
@@ -23,7 +24,8 @@ public class Statistic {
             @JsonProperty("ET") double et,
             @JsonProperty("isReversed") boolean isReversed,
             @JsonProperty("isTime") boolean isTime,
-            @JsonProperty("isInvalid") boolean isInvalid) {
+            @JsonProperty("isInvalid") boolean isInvalid,
+            @JsonProperty("isError") boolean isError) {
         this.name = name;
         this.maximum = maximum;
         this.average = average;
@@ -31,5 +33,6 @@ public class Statistic {
         this.isReversed = isReversed;
         this.isTime = isTime;
         this.isInvalid = isInvalid;
+        this.isError = isError;
     }
 }

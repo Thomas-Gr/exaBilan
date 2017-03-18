@@ -1,0 +1,1452 @@
+{
+  "name" : "exaLang36",
+  "folderName" : "exaLang36",
+  "module" : [
+    {
+      "name" : "Compétences lexicales (expression)",
+      "questions" : [
+        {
+          "number": 1,
+          "name": "Dénomination lexique",
+          "tests" : {
+            "TROIS_ANS" : [
+              {
+                "name" : "Score",
+                "max" : 36,
+                "average" : 26.49,
+                "ET" : 6.96
+              }
+            ],
+            "TROIS_ANS_DEMI" : [
+              {
+                "name" : "Score",
+                "max" : 36,
+                "average" : 31.37,
+                "ET" : 4.05
+              }
+            ],
+            "QUATRE_ANS" : [
+              {
+                "name" : "Score",
+                "max" : 36,
+                "average" : 31.4,
+                "ET" : 3.83
+              }
+            ],
+            "QUATRE_ANS_DEMI" : [
+              {
+                "name" : "Score",
+                "max" : 36,
+                "average" : 32.29,
+                "ET" : 3.84
+              }
+            ],
+            "CINQ_ANS" : [
+              {
+                "name" : "Score",
+                "max" : 36,
+                "average" : 34.14,
+                "ET" : 1.9
+              }
+            ],
+            "CINQ_ANS_DEMI" : [
+              {
+                "name" : "Score",
+                "max" : 36,
+                "average" : 34.31,
+                "ET" : 2.06
+              }
+            ]
+          }
+        },
+        {
+          "number": 2,
+          "name": "Topologie",
+          "tests" : {
+            "TROIS_ANS" : [
+              {
+                "name" : "Score",
+                "max" : 12,
+                "average" : 4.02,
+                "ET" : 2.92
+              }
+            ],
+            "TROIS_ANS_DEMI" : [
+              {
+                "name" : "Score",
+                "max" : 12,
+                "average" : 6.6,
+                "ET" : 3.2
+              }
+            ],
+            "QUATRE_ANS" : [
+              {
+                "name" : "Score",
+                "max" : 12,
+                "average" : 8.02,
+                "ET" : 3.28
+              }
+            ],
+            "QUATRE_ANS_DEMI" : [
+              {
+                "name" : "Score",
+                "max" : 12,
+                "average" : 9.38,
+                "ET" : 2.75
+              }
+            ],
+            "CINQ_ANS" : [
+              {
+                "name" : "Score",
+                "max" : 12,
+                "average" : 10.32,
+                "ET" : 2
+              }
+            ],
+            "CINQ_ANS_DEMI" : [
+              {
+                "name" : "Score",
+                "max" : 12,
+                "average" : 10.6,
+                "ET" : 1.86
+              }
+            ]
+          }
+        },{
+          "number": 3,
+          "name": "Dénomination couleurs",
+          "tests" : {
+            "TROIS_ANS" : [
+              {
+                "name" : "Score",
+                "max" : 10,
+                "average" : 5.23,
+                "ET" : 3.44
+              }
+            ],
+            "TROIS_ANS_DEMI" : [
+              {
+                "name" : "Score",
+                "max" : 10,
+                "average" : 7.58,
+                "ET" : 2.38
+              }
+            ],
+            "QUATRE_ANS" : [
+              {
+                "name" : "Score",
+                "max" : 10,
+                "average" : 8.12,
+                "ET" : 2.34
+              }
+            ],
+            "QUATRE_ANS_DEMI" : [
+              {
+                "name" : "Score",
+                "max" : 10,
+                "average" : 8.96,
+                "ET" : 1.55
+              }
+            ],
+            "CINQ_ANS" : [
+              {
+                "name" : "Score",
+                "max" : 10,
+                "average" : 9.41,
+                "ET" : 0.88
+              }
+            ],
+            "CINQ_ANS_DEMI" : [
+              {
+                "name" : "Score",
+                "max" : 10,
+                "average" : 9.46,
+                "ET" : 0.93
+              }
+            ]
+          }
+        },
+        {
+          "number": 4,
+          "name": "Dénomination rapide couleurs",
+          "tests" : {
+            "TROIS_ANS" : [
+              {
+                "name" : "Temps",
+                "isTime" : true,
+                "average" : 55.55,
+                "ET" : 20.8
+              },
+              {
+                "name" : "Erreurs",
+                "max" : 16,
+                "average" : 2.97,
+                "ET" : 3.26,
+                "isError" : true,
+                "isReversed" : true
+              }
+            ],
+            "TROIS_ANS_DEMI" : [
+              {
+                "name" : "Temps",
+                "isTime" : true,
+                "average" : 51.86,
+                "ET" : 25.28
+              },
+              {
+                "name" : "Erreurs",
+                "max" : 16,
+                "average" : 2.35,
+                "ET" : 3.2,
+                "isError" : true,
+                "isReversed" : true
+              }
+            ],
+            "QUATRE_ANS" : [
+              {
+                "name" : "Temps",
+                "isTime" : true,
+                "average" : 39.49,
+                "ET" : 18.7
+              },
+              {
+                "name" : "Erreurs",
+                "max" : 16,
+                "average" : 1.6,
+                "ET" : 3.01,
+                "isError" : true,
+                "isReversed" : true
+              }
+            ],
+            "QUATRE_ANS_DEMI" : [
+              {
+                "name" : "Temps",
+                "isTime" : true,
+                "average" : 32.57,
+                "ET" : 12.31
+              },
+              {
+                "name" : "Erreurs",
+                "max" : 16,
+                "average" : 0.75,
+                "ET" : 2,
+                "isError" : true,
+                "isReversed" : true
+              }
+            ],
+            "CINQ_ANS" : [
+              {
+                "name" : "Temps",
+                "isTime" : true,
+                "average" : 27.49,
+                "ET" : 8.16
+              },
+              {
+                "name" : "Erreurs",
+                "max" : 16,
+                "average" : 0.53,
+                "ET" : 1.42,
+                "isError" : true,
+                "isReversed" : true
+              }
+            ],
+            "CINQ_ANS_DEMI" : [
+              {
+                "name" : "Temps",
+                "isTime" : true,
+                "average" : 26.41,
+                "ET" : 10.53
+              },
+              {
+                "name" : "Score",
+                "max" : 16,
+                "average" : 0.35,
+                "ET" : 1.24,
+                "isError" : true,
+                "isReversed" : true
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name" : "Compétences lexicales (réception)",
+      "questions" : [
+        {
+          "number": 5,
+          "name": "Quantificateurs et nombre",
+          "tests" : {
+            "TROIS_ANS" : [
+              {
+                "name" : "Score",
+                "max" : 12,
+                "average" : 4.39,
+                "ET" : 2.41
+              }
+            ],
+            "TROIS_ANS_DEMI" : [
+              {
+                "name" : "Score",
+                "max" : 12,
+                "average" : 6.16,
+                "ET" : 3.32
+              }
+            ],
+            "QUATRE_ANS" : [
+              {
+                "name" : "Score",
+                "max" : 12,
+                "average" : 8.18,
+                "ET" : 2.36
+              }
+            ],
+            "QUATRE_ANS_DEMI" : [
+              {
+                "name" : "Score",
+                "max" : 12,
+                "average" : 9.22,
+                "ET" : 2.04
+              }
+            ],
+            "CINQ_ANS" : [
+              {
+                "name" : "Score",
+                "max" : 12,
+                "average" : 10.18,
+                "ET" : 1.43
+              }
+            ],
+            "CINQ_ANS_DEMI" : [
+              {
+                "name" : "Score",
+                "max" : 12,
+                "average" : 10.51,
+                "ET" : 1.71
+              }
+            ]
+          }
+        },
+        {
+          "number": 6,
+          "name": "Topologie",
+          "tests" : {
+            "TROIS_ANS" : [
+              {
+                "name" : "Score",
+                "max" : 12,
+                "average" : 6.21,
+                "ET" : 2.43
+              }
+            ],
+            "TROIS_ANS_DEMI" : [
+              {
+                "name" : "Score",
+                "max" : 12,
+                "average" : 7.91,
+                "ET" : 2.91
+              }
+            ],
+            "QUATRE_ANS" : [
+              {
+                "name" : "Score",
+                "max" : 12,
+                "average" : 9.31,
+                "ET" : 2.43
+              }
+            ],
+            "QUATRE_ANS_DEMI" : [
+              {
+                "name" : "Score",
+                "max" : 12,
+                "average" : 9.88,
+                "ET" : 2.29
+              }
+            ],
+            "CINQ_ANS" : [
+              {
+                "name" : "Score",
+                "max" : 12,
+                "average" : 10.64,
+                "ET" : 1.36
+              }
+            ],
+            "CINQ_ANS_DEMI" : [
+              {
+                "name" : "Score",
+                "max" : 12,
+                "average" : 11.28,
+                "ET" : 1
+              }
+            ]
+          }
+        },
+        {
+          "number": 7,
+          "name": "Désignation images",
+          "tests" : {
+            "TROIS_ANS" : [
+              {
+                "name" : "Score",
+                "max" : 36,
+                "average" : 31.82,
+                "ET" : 4.26
+              }
+            ],
+            "TROIS_ANS_DEMI" : [
+              {
+                "name" : "Score",
+                "max" : 36,
+                "average" : 34.37,
+                "ET" : 2.14
+              }
+            ],
+            "QUATRE_ANS" : [
+              {
+                "name" : "Score",
+                "max" : 36,
+                "average" : 34.94,
+                "ET" : 1.6
+              }
+            ],
+            "QUATRE_ANS_DEMI" : [
+              {
+                "name" : "Score",
+                "max" : 36,
+                "average" : 35.41,
+                "ET" : 1.09
+              }
+            ],
+            "CINQ_ANS" : [
+              {
+                "name" : "Score",
+                "max" : 36,
+                "average" : 35.64,
+                "ET" : 0.63
+              }
+            ],
+            "CINQ_ANS_DEMI" : [
+              {
+                "name" : "Score",
+                "max" : 36,
+                "average" : 35.7,
+                "ET" : 0.75
+              }
+            ]
+          }
+        },
+        {
+          "number": 8,
+          "name": "Désignations parties du corps",
+          "tests" : {
+            "TROIS_ANS" : [
+              {
+                "name" : "Score",
+                "max" : 15,
+                "average" : 12,
+                "ET" : 1.71
+              }
+            ],
+            "TROIS_ANS_DEMI" : [
+              {
+                "name" : "Score",
+                "max" : 15,
+                "average" : 12.85,
+                "ET" : 1.33
+              }
+            ],
+            "QUATRE_ANS" : [
+              {
+                "name" : "Score",
+                "max" : 15,
+                "average" : 13.43,
+                "ET" : 1.34
+              }
+            ],
+            "QUATRE_ANS_DEMI" : [
+              {
+                "name" : "Score",
+                "max" : 15,
+                "average" : 13.98,
+                "ET" : 1.18
+              }
+            ],
+            "CINQ_ANS" : [
+              {
+                "name" : "Score",
+                "max" : 15,
+                "average" : 14.08,
+                "ET" : 1.12
+              }
+            ],
+            "CINQ_ANS_DEMI" : [
+              {
+                "name" : "Score",
+                "max" : 15,
+                "average" : 14.26,
+                "ET" : 1.03
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name" : "Compétences morpho-syntaxiques (exp.)",
+      "questions" : [
+        {
+          "number": 9,
+          "name": "Complément de phrases",
+          "tests" : {
+            "TROIS_ANS" : [
+              {
+                "name" : "Score",
+                "max" : 24,
+                "average" : 12.09,
+                "ET" : 5.09
+              }
+            ],
+            "TROIS_ANS_DEMI" : [
+              {
+                "name" : "Score",
+                "max" : 24,
+                "average" : 16.17,
+                "ET" : 5.11
+              }
+            ],
+            "QUATRE_ANS" : [
+              {
+                "name" : "Score",
+                "max" : 24,
+                "average" : 17.6,
+                "ET" : 4.26
+              }
+            ],
+            "QUATRE_ANS_DEMI" : [
+              {
+                "name" : "Score",
+                "max" : 24,
+                "average" : 19.17,
+                "ET" : 3.72
+              }
+            ],
+            "CINQ_ANS" : [
+              {
+                "name" : "Score",
+                "max" : 24,
+                "average" : 20.8,
+                "ET" : 2.61
+              }
+            ],
+            "CINQ_ANS_DEMI" : [
+              {
+                "name" : "Score",
+                "max" : 24,
+                "average" : 21.26,
+                "ET" : 2.55
+              }
+            ]
+          }
+        },
+        {
+          "number": 10,
+          "name": "Production de phrases",
+          "tests" : {
+            "TROIS_ANS" : [
+              {
+                "name" : "Score",
+                "max" : 150,
+                "average" : 57.07,
+                "ET" : 19
+              }
+            ],
+            "TROIS_ANS_DEMI" : [
+              {
+                "name" : "Score",
+                "max" : 150,
+                "average" : 71.14,
+                "ET" : 14.05
+              }
+            ],
+            "QUATRE_ANS" : [
+              {
+                "name" : "Score",
+                "max" : 150,
+                "average" : 75.56,
+                "ET" : 17.3
+              }
+            ],
+            "QUATRE_ANS_DEMI" : [
+              {
+                "name" : "Score",
+                "max" : 150,
+                "average" : 82.51,
+                "ET" : 13.53
+              }
+            ],
+            "CINQ_ANS" : [
+              {
+                "name" : "Score",
+                "max" : 150,
+                "average" : 88.95,
+                "ET" : 13.99
+              }
+            ],
+            "CINQ_ANS_DEMI" : [
+              {
+                "name" : "Score",
+                "max" : 150,
+                "average" : 92.33,
+                "ET" : 16.78
+              }
+            ]
+          }
+        },
+        {
+          "number": 11,
+          "name": "Répétition de phrases",
+          "tests" : {
+            "TROIS_ANS" : [
+              {
+                "name" : "Score",
+                "max" : 24,
+                "average" : 10.82,
+                "ET" : 6.28
+              }
+            ],
+            "TROIS_ANS_DEMI" : [
+              {
+                "name" : "Score",
+                "max" : 24,
+                "average" : 15.12,
+                "ET" : 6.38
+              }
+            ],
+            "QUATRE_ANS" : [
+              {
+                "name" : "Score",
+                "max" : 24,
+                "average" : 18.21,
+                "ET" : 5.14
+              }
+            ],
+            "QUATRE_ANS_DEMI" : [
+              {
+                "name" : "Score",
+                "max" : 24,
+                "average" : 21.38,
+                "ET" : 3.1
+              }
+            ],
+            "CINQ_ANS" : [
+              {
+                "name" : "Score",
+                "max" : 24,
+                "average" : 21.52,
+                "ET" : 2.92
+              }
+            ],
+            "CINQ_ANS_DEMI" : [
+              {
+                "name" : "Score",
+                "max" : 24,
+                "average" : 21.85,
+                "ET" : 2.37
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name" : "Compétences morpho-syntaxiques (réc.)",
+      "questions" : [
+        {
+          "number": 12,
+          "name": "Compréhension de récit",
+          "tests" : {
+            "TROIS_ANS" : [
+              {
+                "name" : "Score",
+                "isInvalid" : true
+              }
+            ],
+            "TROIS_ANS_DEMI" : [
+              {
+                "name" : "Score",
+                "isInvalid" : true
+              }
+            ],
+            "QUATRE_ANS" : [
+              {
+                "name" : "Score",
+                "max" : 12,
+                "average" : 4.52,
+                "ET" : 2.85
+              }
+            ],
+            "QUATRE_ANS_DEMI" : [
+              {
+                "name" : "Score",
+                "max" : 12,
+                "average" : 6.09,
+                "ET" : 3.05
+              }
+            ],
+            "CINQ_ANS" : [
+              {
+                "name" : "Score",
+                "max" : 12,
+                "average" : 7.57,
+                "ET" : 3.03
+              }
+            ],
+            "CINQ_ANS_DEMI" : [
+              {
+                "name" : "Score",
+                "max" : 12,
+                "average" : 8.01,
+                "ET" : 3.18
+              }
+            ]
+          }
+        },
+        {
+          "number": 13,
+          "name": "Aptitudes morpho-syntaxiques",
+          "tests" : {
+            "TROIS_ANS" : [
+              {
+                "name" : "Score",
+                "max" : 15,
+                "average" : 6.71,
+                "ET" : 2.84
+              }
+            ],
+            "TROIS_ANS_DEMI" : [
+              {
+                "name" : "Score",
+                "max" : 15,
+                "average" : 8.22,
+                "ET" : 2.77
+              }
+            ],
+            "QUATRE_ANS" : [
+              {
+                "name" : "Score",
+                "max" : 15,
+                "average" : 9.35,
+                "ET" : 2.71
+              }
+            ],
+            "QUATRE_ANS_DEMI" : [
+              {
+                "name" : "Score",
+                "max" : 15,
+                "average" : 10.4,
+                "ET" : 2.63
+              }
+            ],
+            "CINQ_ANS" : [
+              {
+                "name" : "Score",
+                "max" : 15,
+                "average" : 11.28,
+                "ET" : 2.98
+              }
+            ],
+            "CINQ_ANS_DEMI" : [
+              {
+                "name" : "Score",
+                "max" : 15,
+                "average" : 12.29,
+                "ET" : 2.2
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name" : "Phonologie",
+      "questions" : [
+        {
+          "number": 15,
+          "name": "Répétition de logatomes",
+          "tests" : {
+            "TROIS_ANS" : [
+              {
+                "name" : "Score",
+                "max" : 12,
+                "average" : 6.56,
+                "ET" : 3.35
+              }
+            ],
+            "TROIS_ANS_DEMI" : [
+              {
+                "name" : "Score",
+                "max" : 12,
+                "average" : 8.41,
+                "ET" : 2.74
+              }
+            ],
+            "QUATRE_ANS" : [
+              {
+                "name" : "Score",
+                "max" : 12,
+                "average" : 9.17,
+                "ET" : 2.46
+              }
+            ],
+            "QUATRE_ANS_DEMI" : [
+              {
+                "name" : "Score",
+                "max" : 12,
+                "average" : 10.5,
+                "ET" : 1.46
+              }
+            ],
+            "CINQ_ANS" : [
+              {
+                "name" : "Score",
+                "max" : 12,
+                "average" : 10.85,
+                "ET" : 1.56
+              }
+            ],
+            "CINQ_ANS_DEMI" : [
+              {
+                "name" : "Score",
+                "max" : 12,
+                "average" : 10.47,
+                "ET" : 2.07
+              }
+            ]
+          }
+        },
+        {
+          "number": 14,
+          "name": "Dénomination phonologie",
+          "tests" : {
+            "TROIS_ANS" : [
+              {
+                "name" : "Score",
+                "max" : 36,
+                "average" : 19.59,
+                "ET" : 8.37
+              }
+            ],
+            "TROIS_ANS_DEMI" : [
+              {
+                "name" : "Score",
+                "max" : 36,
+                "average" : 26.4,
+                "ET" : 7.16
+              }
+            ],
+            "QUATRE_ANS" : [
+              {
+                "name" : "Score",
+                "max" : 36,
+                "average" : 28.92,
+                "ET" : 5.61
+              }
+            ],
+            "QUATRE_ANS_DEMI" : [
+              {
+                "name" : "Score",
+                "max" : 36,
+                "average" : 31.57,
+                "ET" : 4.22
+              }
+            ],
+            "CINQ_ANS" : [
+              {
+                "name" : "Score",
+                "max" : 36,
+                "average" : 33.16,
+                "ET" : 3.34
+              }
+            ],
+            "CINQ_ANS_DEMI" : [
+              {
+                "name" : "Score",
+                "max" : 36,
+                "average" : 32.98,
+                "ET" : 4.84
+              }
+            ]
+          }
+        },
+        {
+          "number": 16,
+          "name": "Rimes vocaliques",
+          "tests" : {
+            "TROIS_ANS" : [
+              {
+                "name" : "Score",
+                "isInvalid" : true
+              }
+            ],
+            "TROIS_ANS_DEMI" : [
+              {
+                "name" : "Score",
+                "isInvalid" : true
+              }
+            ],
+            "QUATRE_ANS" : [
+              {
+                "name" : "Score",
+                "isInvalid" : true
+              }
+            ],
+            "QUATRE_ANS_DEMI" : [
+              {
+                "name" : "Score",
+                "isInvalid" : true
+              }
+            ],
+            "CINQ_ANS" : [
+              {
+                "name" : "Score",
+                "max" : 10,
+                "average" : 6.13,
+                "ET" : 2.85
+              }
+            ],
+            "CINQ_ANS_DEMI" : [
+              {
+                "name" : "Score",
+                "max" : 10,
+                "average" : 6.63,
+                "ET" : 2.91
+              }
+            ]
+          }
+        },
+        {
+          "number": 17,
+          "name": "Gnosies audito-phonétiques",
+          "tests" : {
+            "TROIS_ANS" : [
+              {
+                "name" : "Score",
+                "isInvalid" : true
+              }
+            ],
+            "TROIS_ANS_DEMI" : [
+              {
+                "name" : "Score",
+                "isInvalid" : true
+              }
+            ],
+            "QUATRE_ANS" : [
+              {
+                "name" : "Score",
+                "isInvalid" : true
+              }
+            ],
+            "QUATRE_ANS_DEMI" : [
+              {
+                "name" : "Score",
+                "max" : 10,
+                "average" : 5.47,
+                "ET" : 3.04
+              }
+            ],
+            "CINQ_ANS" : [
+              {
+                "name" : "Score",
+                "max" : 10,
+                "average" : 6.35,
+                "ET" : 2.84
+              }
+            ],
+            "CINQ_ANS_DEMI" : [
+              {
+                "name" : "Score",
+                "max" : 10,
+                "average" : 7,
+                "ET" : 2.82
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name" : "Attention mémoire",
+      "questions" : [
+        {
+          "number": 18,
+          "name": "Empan de chiffres",
+          "tests" : {
+            "TROIS_ANS" : [
+              {
+                "name" : "Score",
+                "max" : 4,
+                "average" : 2.2,
+                "ET" : 0.83
+              }
+            ],
+            "TROIS_ANS_DEMI" : [
+              {
+                "name" : "Score",
+                "max" : 4,
+                "average" : 2.35,
+                "ET" : 0.73
+              }
+            ],
+            "QUATRE_ANS" : [
+              {
+                "name" : "Score",
+                "max" : 4,
+                "average" : 2.86,
+                "ET" : 0.73
+              }
+            ],
+            "QUATRE_ANS_DEMI" : [
+              {
+                "name" : "Score",
+                "max" : 4,
+                "average" : 3.13,
+                "ET" : 0.85
+              }
+            ],
+            "CINQ_ANS" : [
+              {
+                "name" : "Score",
+                "max" : 4,
+                "average" : 3.37,
+                "ET" : 0.75
+              }
+            ],
+            "CINQ_ANS_DEMI" : [
+              {
+                "name" : "Score",
+                "max" : 4,
+                "average" : 3.56,
+                "ET" : 0.68
+              }
+            ]
+          }
+        },
+        {
+          "number": 19,
+          "name": "Empan de mots",
+          "tests" : {
+            "TROIS_ANS" : [
+              {
+                "name" : "Score",
+                "max" : 4,
+                "average" : 2.08,
+                "ET" : 0.62
+              }
+            ],
+            "TROIS_ANS_DEMI" : [
+              {
+                "name" : "Score",
+                "max" : 4,
+                "average" : 2.38,
+                "ET" : 0.67
+              }
+            ],
+            "QUATRE_ANS" : [
+              {
+                "name" : "Score",
+                "max" : 4,
+                "average" : 2.59,
+                "ET" : 0.71
+              }
+            ],
+            "QUATRE_ANS_DEMI" : [
+              {
+                "name" : "Score",
+                "max" : 4,
+                "average" : 2.89,
+                "ET" : 0.66
+              }
+            ],
+            "CINQ_ANS" : [
+              {
+                "name" : "Score",
+                "max" : 4,
+                "average" : 3.19,
+                "ET" : 0.65
+              }
+            ],
+            "CINQ_ANS_DEMI" : [
+              {
+                "name" : "Score",
+                "max" : 4,
+                "average" : 3.22,
+                "ET" : 0.64
+              }
+            ]
+          }
+        },
+        {
+          "number": 20,
+          "name": "Barrage temps",
+          "tests" : {
+            "TROIS_ANS" : [
+              {
+                "name" : "Temps",
+                "isTime" : true,
+                "average" : 56.07,
+                "ET" : 28.3
+              },
+              {
+                "name" : "Score",
+                "max" : 10,
+                "average" : 8.06,
+                "ET" : 2.05
+              }
+            ],
+            "TROIS_ANS_DEMI" : [
+              {
+                "name" : "Temps",
+                "isTime" : true,
+                "average" : 46.64,
+                "ET" : 26.68
+              },
+              {
+                "name" : "Score",
+                "max" : 10,
+                "average" : 8.81,
+                "ET" : 1.74
+              }
+            ],
+            "QUATRE_ANS" : [
+              {
+                "name" : "Temps",
+                "isTime" : true,
+                "average" : 35.42,
+                "ET" : 20.6
+              },
+              {
+                "name" : "Score",
+                "max" : 10,
+                "average" : 9.18,
+                "ET" : 1.49
+              }
+            ],
+            "QUATRE_ANS_DEMI" : [
+              {
+                "name" : "Temps",
+                "isTime" : true,
+                "average" : 29.18,
+                "ET" : 15.21
+              },
+              {
+                "name" : "Score",
+                "max" : 10,
+                "average" : 9.61,
+                "ET" : 0.76
+              }
+            ],
+            "CINQ_ANS" : [
+              {
+                "name" : "Temps",
+                "isTime" : true,
+                "average" : 24.38,
+                "ET" : 16.29
+              },
+              {
+                "name" : "Score",
+                "max" : 10,
+                "average" : 9.81,
+                "ET" : 0.8
+              }
+            ],
+            "CINQ_ANS_DEMI" : [
+              {
+                "name" : "Temps",
+                "isTime" : true,
+                "average" : 19.99,
+                "ET" : 9.84
+              },
+              {
+                "name" : "Score",
+                "max" : 10,
+                "average" : 9.84,
+                "ET" : 0.43
+              }
+            ]
+          }
+        },
+        {
+          "number": 21,
+          "name": "Attention auditive",
+          "tests" : {
+            "TROIS_ANS" : [
+              {
+                "name" : "Score",
+                "isInvalid" : true
+              }
+            ],
+            "TROIS_ANS_DEMI" : [
+              {
+                "name" : "Score",
+                "isInvalid" : true
+              }
+            ],
+            "QUATRE_ANS" : [
+              {
+                "name" : "Score",
+                "max" : 20,
+                "average" : 9.43,
+                "ET" : 7.44
+              }
+            ],
+            "QUATRE_ANS_DEMI" : [
+              {
+                "name" : "Score",
+                "max" : 20,
+                "average" : 12.79,
+                "ET" : 6.81
+              }
+            ],
+            "CINQ_ANS" : [
+              {
+                "name" : "Score",
+                "max" : 20,
+                "average" : 16.46,
+                "ET" : 4.25
+              }
+            ],
+            "CINQ_ANS_DEMI" : [
+              {
+                "name" : "Score",
+                "max" : 20,
+                "average" : 16.57,
+                "ET" : 3.08
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Compétences non verbales",
+      "questions": [
+        {
+          "number": 22,
+          "name": "Loto sonore",
+          "tests": {
+            "TROIS_ANS": [
+              {
+                "name": "Score",
+                "max": 10,
+                "average": 5.72,
+                "ET": 2.69
+              }
+            ],
+            "TROIS_ANS_DEMI": [
+              {
+                "name": "Score",
+                "max": 10,
+                "average": 7.7,
+                "ET": 2.07
+              }
+            ],
+            "QUATRE_ANS": [
+              {
+                "name": "Score",
+                "max": 10,
+                "average": 8.35,
+                "ET": 1.61
+              }
+            ],
+            "QUATRE_ANS_DEMI": [
+              {
+                "name": "Score",
+                "max": 10,
+                "average": 8.96,
+                "ET": 1.26
+              }
+            ],
+            "CINQ_ANS": [
+              {
+                "name": "Score",
+                "max": 10,
+                "average": 9.03,
+                "ET": 1.29
+              }
+            ],
+            "CINQ_ANS_DEMI": [
+              {
+                "name": "Score",
+                "max": 10,
+                "average": 9.36,
+                "ET": 1.1
+              }
+            ]
+          }
+        },
+        {
+          "number": 23,
+          "name": "Complément d'images",
+          "tests": {
+            "TROIS_ANS": [
+              {
+                "name": "Score",
+                "max": 6,
+                "average": 2,
+                "ET": 1.1
+              }
+            ],
+            "TROIS_ANS_DEMI": [
+              {
+                "name": "Score",
+                "max": 6,
+                "average": 2.72,
+                "ET": 1.31
+              }
+            ],
+            "QUATRE_ANS": [
+              {
+                "name": "Score",
+                "max": 6,
+                "average": 3.11,
+                "ET": 1.49
+              }
+            ],
+            "QUATRE_ANS_DEMI": [
+              {
+                "name": "Score",
+                "max": 6,
+                "average": 3.8,
+                "ET": 1.39
+              }
+            ],
+            "CINQ_ANS": [
+              {
+                "name": "Score",
+                "max": 6,
+                "average": 4.03,
+                "ET": 1.25
+              }
+            ],
+            "CINQ_ANS_DEMI": [
+              {
+                "name": "Score",
+                "max": 6,
+                "average": 4.24,
+                "ET": 1.22
+              }
+            ]
+          }
+        },
+        {
+          "number": 24,
+          "name": "Schéma corporel",
+          "tests": {
+            "TROIS_ANS": [
+              {
+                "name": "Score",
+                "max": 7,
+                "average": 5.33,
+                "ET": 1.73
+              }
+            ],
+            "TROIS_ANS_DEMI": [
+              {
+                "name": "Score",
+                "max": 7,
+                "average": 5.85,
+                "ET": 1.43
+              }
+            ],
+            "QUATRE_ANS": [
+              {
+                "name": "Score",
+                "max": 7,
+                "average": 6.23,
+                "ET": 1.12
+              }
+            ],
+            "QUATRE_ANS_DEMI": [
+              {
+                "name": "Score",
+                "max": 7,
+                "average": 6.44,
+                "ET": 1
+              }
+            ],
+            "CINQ_ANS": [
+              {
+                "name": "Score",
+                "max": 7,
+                "average": 6.6,
+                "ET": 0.82
+              }
+            ],
+            "CINQ_ANS_DEMI": [
+              {
+                "name": "Score",
+                "max": 7,
+                "average": 6.77,
+                "ET": 0.56
+              }
+            ]
+          }
+        },
+        {
+          "number": 25,
+          "name": "Discrimination visuelle",
+          "tests": {
+            "TROIS_ANS": [
+              {
+                "name": "Score",
+                "max": 10,
+                "average": 7.96,
+                "ET": 2.13
+              }
+            ],
+            "TROIS_ANS_DEMI": [
+              {
+                "name": "Score",
+                "max": 10,
+                "average": 9.16,
+                "ET": 1.33
+              }
+            ],
+            "QUATRE_ANS": [
+              {
+                "name": "Score",
+                "max": 10,
+                "average": 9.46,
+                "ET": 0.82
+              }
+            ],
+            "QUATRE_ANS_DEMI": [
+              {
+                "name": "Score",
+                "max": 10,
+                "average": 9.67,
+                "ET": 0.71
+              }
+            ],
+            "CINQ_ANS": [
+              {
+                "name": "Score",
+                "max": 10,
+                "average": 9.74,
+                "ET": 0.72
+              }
+            ],
+            "CINQ_ANS_DEMI": [
+              {
+                "name": "Score",
+                "max": 10,
+                "average": 9.74,
+                "ET": 1
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
