@@ -1,5 +1,6 @@
 package com.exabilan.core;
 
+import static java.time.LocalDate.MIN;
 import static java.util.Arrays.stream;
 import static java.util.stream.Collectors.joining;
 import static com.google.common.collect.Maps.immutableEntry;
@@ -75,7 +76,7 @@ public class SimplePatientDataParser implements PatientDataParser {
             Patient patient = new Patient(
                     extractAttribute(profile, PRENOM),
                     extractAttribute(profile, NOM),
-                    LocalDate.parse(extractAttribute(profile, DATE_NAISSANCE), formatter),
+                    transformToLocalDate(extractAttribute(profile, DATE_NAISSANCE)),
                     Level.fromLevel(grade));
 
             NodeList passationList = ((Element) profile).getElementsByTagName(PASSATION);
@@ -97,7 +98,7 @@ public class SimplePatientDataParser implements PatientDataParser {
                 patient,
                 new Results(
                         generateAllResults(exaLang, testList),
-                        LocalDate.parse(transformDate(extractAttribute(passation, DATE_PASSAGE)), formatter),
+                        transformToLocalDate(transformDate(extractAttribute(passation, DATE_PASSAGE))),
                         Integer.valueOf(extractAttribute(passation, NUMERO))));
     }
 
@@ -136,6 +137,14 @@ public class SimplePatientDataParser implements PatientDataParser {
 
     private List<Answer> getPotentialAnswer(boolean done, String answer) {
         return done ? resultAssociator.parseAnswer(answer) : ImmutableList.of();
+    }
+
+    private static LocalDate transformToLocalDate(String date) {
+        try {
+            return LocalDate.parse(date, formatter);
+        } catch (Exception e) {
+            return MIN;
+        }
     }
 
 }
