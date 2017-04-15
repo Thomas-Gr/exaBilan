@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 @JsonFormat(shape = JsonFormat.Shape.OBJECT)
 public enum Level {
     DEFAULT("undefined"),
+    UNKNOWN(""),
     PSM("PSM"),
     MSM("MSM"),
     GSM("GSM"),
