@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="300.0" minWidth="600.0" prefHeight="450.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.exabilan.ui.controllers.ExabilanListController">
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.exabilan.ui.controllers.ExabilanListController">
    <children>
       <SplitPane dividerPositions="0.3" minWidth="500.0" prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <items>
@@ -14,6 +14,7 @@
                  <columns>
                      <TableColumn fx:id="lastNameColumn" maxWidth="300.0" prefWidth="50.0" text="Nom" />
                      <TableColumn fx:id="firstNameColumn" maxWidth="300.0" prefWidth="50.0" text="Prénom" />
+                     <TableColumn fx:id="softwareColumn" maxWidth="300.0" prefWidth="50.0" text="Logiciel" />
                      <TableColumn fx:id="dateColumn" maxWidth="300.0" prefWidth="50.0" text="Date bilan" />
                  </columns>
                <columnResizePolicy>

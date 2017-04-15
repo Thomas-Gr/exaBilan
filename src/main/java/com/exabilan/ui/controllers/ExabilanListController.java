@@ -42,6 +42,7 @@ public class ExabilanListController {
     @FXML private TableColumn<PatientWithData, String> firstNameColumn;
     @FXML private TableColumn<PatientWithData, String> lastNameColumn;
     @FXML private TableColumn<PatientWithData, String> dateColumn;
+    @FXML private TableColumn<PatientWithData, String> softwareColumn;
     @FXML private ComboBox<String> patientDate;
     @FXML private Button generateBilan;
 
@@ -55,6 +56,9 @@ public class ExabilanListController {
         dateColumn.setCellValueFactory(person ->
                 new SimpleStringProperty(
                         DISPLAY_REVERSED_DATE_FILE.apply(person.getValue().getLastBilanDate())));
+
+        softwareColumn.setCellValueFactory(person ->
+                new SimpleStringProperty(person.getValue().getExaLang().getName()));
 
         patientList.getSelectionModel().selectedItemProperty().addListener(
                 (observable, oldValue, newValue) -> showPatientDetails(newValue));
