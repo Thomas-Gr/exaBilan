@@ -1,6 +1,5 @@
 package com.exabilan.core;
 
-import static java.time.LocalDate.MIN;
 import static java.util.Arrays.stream;
 import static java.util.stream.Collectors.joining;
 import static com.google.common.collect.Maps.immutableEntry;
@@ -143,7 +142,7 @@ public class SimplePatientDataParser implements PatientDataParser {
         try {
             return LocalDate.parse(date, formatter);
         } catch (Exception e) {
-            return MIN;
+            return LocalDate.parse("01/01/1900", formatter);
         }
     }
 
