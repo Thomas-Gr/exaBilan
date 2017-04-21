@@ -85,7 +85,8 @@ public class AllBilansGenerator {
                                 configurationReader.getOrthophoniste(),
                                 entry.getKey(),
                                 exaLang,
-                                result))
+                                result,
+                                false))
                         .collect(toList()))
                 .flatMap(Collection::stream)
                 .collect(toList());

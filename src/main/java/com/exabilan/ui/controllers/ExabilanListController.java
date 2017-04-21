@@ -1,13 +1,14 @@
 package com.exabilan.ui.controllers;
 
+import static java.awt.Desktop.getDesktop;
 import static java.lang.Integer.parseInt;
 import static java.util.Comparator.reverseOrder;
 import static java.util.stream.Collectors.toList;
 import static com.exabilan.component.helper.Helpers.DISPLAY_DATE_HUMAN;
 import static com.exabilan.component.helper.Helpers.DISPLAY_REVERSED_DATE_FILE;
+import static org.apache.commons.io.FilenameUtils.getExtension;
 import static javafx.collections.FXCollections.observableArrayList;
 
-import java.awt.Desktop;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -18,6 +19,7 @@ import java.util.regex.Pattern;
 import com.exabilan.core.CoreFeatureProxy;
 import com.exabilan.ui.model.PatientWithData;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
 
 import javafx.beans.property.SimpleStringProperty;
@@ -81,9 +83,11 @@ public class ExabilanListController {
             File file = chooseFile(selectedItem, matcher.group(2));
 
             if (file != null) {
-                writeFile(selectedItem, parseInt(matcher.group(1)), file);
+                String extension = getExtension(file.getName());
 
-                Desktop.getDesktop().open(file);
+                writeFile(selectedItem, parseInt(matcher.group(1)), file, extension.equals("doc"));
+
+                getDesktop().open(file);
             }
         }
     }
@@ -108,26 +112,38 @@ public class ExabilanListController {
                 .collect(toList());
     }
 
-    private void writeFile(PatientWithData selectedItem, int selectedResult, File file) throws IOException {
+    private void writeFile(PatientWithData selectedItem, int selectedResult, File file, boolean hideConfidentialData) throws IOException {
         XWPFDocument document = coreFeaturesProxy.generateBilanFile(
                 selectedItem.getExaLang(),
                 selectedItem.getPatient(),
                 selectedItem.getBilans().stream()
                         .filter(a -> a.getNumber() == selectedResult)
                         .findFirst()
-                        .get());
+                        .get(),
+                hideConfidentialData);
 
-        try (FileOutputStream fos = new FileOutputStream(file)) {
+        File temporaryFile = new File("temp.docx");
+
+        try (FileOutputStream fos = new FileOutputStream(temporaryFile)) {
             document.write(fos);
         }
+
+        if (hideConfidentialData) {
+            coreFeaturesProxy.convertToDoc(temporaryFile);
+        }
+
+        FileUtils.copyFile(temporaryFile, file);
+        temporaryFile.delete();
     }
 
     private File chooseFile(PatientWithData selectedItem, String date) {
         FileChooser fileChooser = new FileChooser();
 
-        fileChooser.setInitialFileName(String.format("%s - %s.docx", selectedItem.getPatient().getFullName(), date));
+        fileChooser.setInitialFileName(String.format("%s - %s", selectedItem.getPatient().getFullName(), date));
         fileChooser.getExtensionFilters().add(
                 new FileChooser.ExtensionFilter("Fichiers word (*.docx)", "*.docx"));
+        fileChooser.getExtensionFilters().add(
+                new FileChooser.ExtensionFilter("Fichiers word (*.doc)", "*.doc"));
 
         return fileChooser.showSaveDialog(application);
     }

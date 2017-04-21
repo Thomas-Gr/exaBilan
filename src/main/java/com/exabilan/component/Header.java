@@ -3,6 +3,7 @@ package com.exabilan.component;
 import static com.exabilan.component.helper.Helpers.DISPLAY_DATE_HUMAN;
 import static com.exabilan.component.helper.Helpers.computeAge;
 import static com.exabilan.component.helper.Styles.BLUE;
+import static com.exabilan.component.helper.Styles.CONFIDENTIAL;
 import static com.exabilan.component.helper.Styles.MAIN_TITLE;
 import static com.exabilan.component.helper.Styles.TITLE;
 import static org.apache.poi.xwpf.usermodel.ParagraphAlignment.BOTH;
@@ -83,10 +84,10 @@ public class Header implements HighLevelComponent {
         return new Paragraph()
                 .addText("Concerne :", TITLE)
                 .addText(" ")
-                .addLine(bilan.getPatient().getFullName())
+                .addLine(bilan.isHideConfidentialData() ? CONFIDENTIAL : bilan.getPatient().getFullName())
                 .addText("Date de naissance :", TITLE)
                 .addText(" ")
-                .addLine(DISPLAY_DATE_HUMAN.apply(bilan.getPatient().getBirthDate()));
+                .addLine(bilan.isHideConfidentialData() ? CONFIDENTIAL : DISPLAY_DATE_HUMAN.apply(bilan.getPatient().getBirthDate()));
     }
 
     private Paragraph getDocteur() {
@@ -99,7 +100,7 @@ public class Header implements HighLevelComponent {
                 .addLine(String.format(
                         "Veuillez trouver ci-dessous mes observations concernant %s, âgé de %s, " +
                                 "scolarisé en classe de xxx à xxx, réalisées au cours du bilan orthophonique.",
-                        bilan.getPatient().getFullName(),
+                        bilan.isHideConfidentialData() ? CONFIDENTIAL : bilan.getPatient().getFullName(),
                         computeAge(bilan.getPatient().getBirthDate())));
     }
 

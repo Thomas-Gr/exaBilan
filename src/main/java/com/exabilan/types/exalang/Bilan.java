@@ -8,4 +8,5 @@ public class Bilan {
     Patient patient;
     ExaLang exalang;
     Results results;
+    boolean hideConfidentialData;
 }

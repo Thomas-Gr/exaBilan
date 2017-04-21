@@ -1,5 +1,7 @@
 package com.exabilan.config;
 
+import static com.google.inject.name.Names.named;
+
 import javax.inject.Named;
 
 import com.exabilan.component.Footer;
@@ -34,6 +36,7 @@ public class ConfigurationModule extends AbstractModule {
         bind(ExalangManager.class).to(JacksonExalangManager.class).asEagerSingleton();
         bind(ResultAssociator.class).to(SimpleResultAssociator.class).asEagerSingleton();
         bind(ConfigurationReader.class).to(SimpleConfigurationReader.class).asEagerSingleton();
+        bindConstant().annotatedWith(named("zamzarKey")).to("xxxxxxxxxxxx");
     }
 
     @Provides @Singleton @Named("exalangNames")

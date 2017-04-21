@@ -3,6 +3,7 @@ package com.exabilan.core;
 import static java.util.Comparator.comparing;
 import static java.util.stream.Collectors.toList;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -28,6 +29,7 @@ public class CoreFeatureProxy {
     private final PatientDataParser patientDataParser;
     private final ExalangManager exalangManager;
     private final ConfigurationReader configurationReader;
+    private final DocumentConverter documentConverter;
 
     @Inject
     public CoreFeatureProxy(
@@ -35,12 +37,14 @@ public class CoreFeatureProxy {
             FileGenerator fileGenerator,
             PatientDataParser patientDataParser,
             ExalangManager exalangManager,
-            ConfigurationReader configurationReader) {
+            ConfigurationReader configurationReader,
+            DocumentConverter documentConverter) {
         this.contentGenerator = contentGenerator;
         this.fileGenerator = fileGenerator;
         this.patientDataParser = patientDataParser;
         this.exalangManager = exalangManager;
         this.configurationReader = configurationReader;
+        this.documentConverter = documentConverter;
     }
 
     public List<PatientWithData> getAllPatients() throws IOException {
@@ -60,14 +64,18 @@ public class CoreFeatureProxy {
         return result;
     }
 
-    public XWPFDocument generateBilanFile(ExaLang exalang, Patient patient, Results result) {
+    public XWPFDocument generateBilanFile(ExaLang exalang, Patient patient, Results result, boolean hideConfidentialData) {
         return contentGenerator
                 .createDocument(new Bilan(
                         configurationReader.getOrthophoniste(),
                         patient,
                         exalang,
-                        result))
+                        result,
+                        hideConfidentialData))
                 .build(fileGenerator);
     }
 
+    public void convertToDoc(File file) {
+        documentConverter.convertToDoc(file, file);
+    }
 }

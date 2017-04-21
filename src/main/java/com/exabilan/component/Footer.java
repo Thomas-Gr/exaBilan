@@ -1,5 +1,6 @@
 package com.exabilan.component;
 
+import static com.exabilan.component.helper.Styles.CONFIDENTIAL;
 import static com.exabilan.component.helper.Styles.FIRST_LINE_INDENT;
 import static com.exabilan.component.helper.Styles.GREEN_2;
 import static com.exabilan.component.helper.Styles.ORANGE;
@@ -32,7 +33,7 @@ public class Footer implements HighLevelComponent {
         Paragraph element2 = new Paragraph()
                 .withParagraphStyle(FIRST_LINE_INDENT)
                 .addText("En conclusion, le bilan révèle que ")
-                .addText(bilan.getPatient().getFullName())
+                .addText(bilan.isHideConfidentialData() ? CONFIDENTIAL : bilan.getPatient().getFullName())
                 .addLine(" ...............");
 
         Paragraph element3 = new Paragraph()
@@ -44,7 +45,7 @@ public class Footer implements HighLevelComponent {
                 .withParagraphStyle(ParagraphStyle.builder()
                         .alignment(RIGHT)
                         .build())
-                .addText(bilan.getOrthophoniste().getFullName());
+                .addText(bilan.isHideConfidentialData() ? CONFIDENTIAL : bilan.getPatient().getFullName());
 
         return ImmutableList.of(element, element2, element3, element4);
     }

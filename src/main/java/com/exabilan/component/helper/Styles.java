@@ -46,4 +46,6 @@ public final class Styles {
                 .build();
     }
 
+    public static final String CONFIDENTIAL = "CONFIDENTIEL";
+
 }
