@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 public enum Level {
     DEFAULT("undefined"),
     UNKNOWN(""),
+    TPSM("TPSM"),
     PSM("PSM"),
     MSM("MSM"),
     GSM("GSM"),
