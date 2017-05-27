@@ -16,12 +16,13 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import com.exabilan.core.CoreFeatureProxy;
+import com.exabilan.proxy.CoreFeatureProxy;
 import com.exabilan.ui.model.PatientWithData;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
 
+import javafx.application.Application;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -32,7 +33,7 @@ import javafx.scene.control.TableView;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
-public class ExabilanListController {
+public class ExabilanListController extends ExabilanController<CoreFeatureProxy> {
 
     private static final Pattern PATTERN = Pattern.compile("(.*) - (.*)");
 
@@ -47,9 +48,6 @@ public class ExabilanListController {
     @FXML private TableColumn<PatientWithData, String> softwareColumn;
     @FXML private ComboBox<String> patientDate;
     @FXML private Button generateBilan;
-
-    private CoreFeatureProxy coreFeaturesProxy;
-    private Stage application;
 
     @FXML
     private void initialize() {
@@ -66,9 +64,9 @@ public class ExabilanListController {
                 (observable, oldValue, newValue) -> showPatientDetails(newValue));
     }
 
-    public void setUp(CoreFeatureProxy coreFeaturesProxy, Stage application) throws IOException {
-        this.coreFeaturesProxy = coreFeaturesProxy;
-        this.application = application;
+    @Override
+    public void setUp(CoreFeatureProxy coreFeaturesProxy, Stage stage, Application application) throws IOException {
+        super.setUp(coreFeaturesProxy, stage, application);
 
         patientList.setItems(observableArrayList(coreFeaturesProxy.getAllPatients()));
     }
@@ -113,7 +111,7 @@ public class ExabilanListController {
     }
 
     private void writeFile(PatientWithData selectedItem, int selectedResult, File file, boolean hideConfidentialData) throws IOException {
-        XWPFDocument document = coreFeaturesProxy.generateBilanFile(
+        XWPFDocument document = featureProxy.generateBilanFile(
                 selectedItem.getExaLang(),
                 selectedItem.getPatient(),
                 selectedItem.getBilans().stream()
@@ -129,7 +127,7 @@ public class ExabilanListController {
         }
 
         if (hideConfidentialData) {
-            coreFeaturesProxy.convertToDoc(temporaryFile);
+            featureProxy.convertToDoc(temporaryFile);
         }
 
         FileUtils.copyFile(temporaryFile, file);
@@ -145,7 +143,6 @@ public class ExabilanListController {
         fileChooser.getExtensionFilters().add(
                 new FileChooser.ExtensionFilter("Fichiers word (*.doc)", "*.doc"));
 
-        return fileChooser.showSaveDialog(application);
+        return fileChooser.showSaveDialog(stage);
     }
-
 }

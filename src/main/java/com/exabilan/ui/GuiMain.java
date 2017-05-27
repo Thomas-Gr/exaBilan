@@ -7,8 +7,10 @@ import static com.google.inject.util.Modules.combine;
 import java.io.IOException;
 
 import com.exabilan.config.ConfigurationModule;
-import com.exabilan.core.CoreFeatureProxy;
+import com.exabilan.proxy.CoreFeatureProxy;
+import com.exabilan.proxy.MenuFeatureProxy;
 import com.exabilan.ui.controllers.ExabilanListController;
+import com.exabilan.ui.controllers.ExabilanMenuController;
 import com.google.inject.AbstractModule;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
@@ -17,6 +19,7 @@ import com.google.inject.Module;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 public class GuiMain extends Application {
@@ -30,25 +33,31 @@ public class GuiMain extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        FXMLLoader loader = new FXMLLoader(getClassLoader().getResource("view/ExabilanListView.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClassLoader().getResource("view/rootLayout.fxml"));
 
-        primaryStage.setScene(new Scene(loader.load()));
+        BorderPane rootLayout = loader.load();
 
-        setUpController(loader, primaryStage);
+        FXMLLoader listViewLoader = new FXMLLoader(getClassLoader().getResource("view/ExabilanListView.fxml"));
+        rootLayout.setCenter(listViewLoader.load());
 
-        primaryStage.setTitle("ExaBilan - v0.1");
+        setUpController(loader, listViewLoader, primaryStage);
+
+        primaryStage.setScene(new Scene(rootLayout));
+        primaryStage.show();
+
+        primaryStage.setTitle("ExaBilan - v1.0");
         primaryStage.show();
     }
 
-    private static void setUpController(FXMLLoader loader, Stage primaryStage) throws IOException {
-        ((ExabilanListController) loader.getController()).setUp(prepareCoreFeatures(), primaryStage);
-    }
-
-    private static CoreFeatureProxy prepareCoreFeatures() {
+    private void setUpController(
+            FXMLLoader menuLoader,
+            FXMLLoader coreLoader,
+            Stage primaryStage) throws IOException {
         Injector injector = Guice.createInjector(combine(
                 new ConfigurationModule(), configModuleFromArguments(args)));
 
-        return injector.getInstance(CoreFeatureProxy.class);
+        ((ExabilanMenuController) menuLoader.getController()).setUp(injector.getInstance(MenuFeatureProxy.class), primaryStage, this);
+        ((ExabilanListController) coreLoader.getController()).setUp(injector.getInstance(CoreFeatureProxy.class), primaryStage, this);
     }
 
     private static Module configModuleFromArguments(String[] args) {

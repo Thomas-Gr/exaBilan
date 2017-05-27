@@ -21,6 +21,8 @@ import com.exabilan.interfaces.FileGenerator;
 import com.exabilan.interfaces.HighLevelComponent;
 import com.exabilan.interfaces.PatientDataParser;
 import com.exabilan.interfaces.ResultAssociator;
+import com.exabilan.service.HttpServiceAdapter;
+import com.exabilan.service.ServiceAdapter;
 import com.google.common.collect.ImmutableList;
 import com.google.inject.AbstractModule;
 import com.google.inject.Provides;
@@ -36,7 +38,10 @@ public class ConfigurationModule extends AbstractModule {
         bind(ExalangManager.class).to(JacksonExalangManager.class).asEagerSingleton();
         bind(ResultAssociator.class).to(SimpleResultAssociator.class).asEagerSingleton();
         bind(ConfigurationReader.class).to(SimpleConfigurationReader.class).asEagerSingleton();
+        bind(ServiceAdapter.class).to(HttpServiceAdapter.class).asEagerSingleton();
         bindConstant().annotatedWith(named("zamzarKey")).to("xxxxxxxxxxxx");
+        bindConstant().annotatedWith(named("apiEndPoint")).to("https://rw2m17t6vb.execute-api.eu-west-1.amazonaws.com/prod/");
+        bindConstant().annotatedWith(named("version")).to("1.0");
     }
 
     @Provides @Singleton @Named("exalangNames")

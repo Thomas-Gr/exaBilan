@@ -1,4 +1,4 @@
-package com.exabilan.core;
+package com.exabilan.proxy;
 
 import static java.util.Comparator.comparing;
 import static java.util.stream.Collectors.toList;
@@ -10,6 +10,7 @@ import java.util.List;
 
 import javax.inject.Inject;
 
+import com.exabilan.core.DocumentConverter;
 import com.exabilan.interfaces.ConfigurationReader;
 import com.exabilan.interfaces.ContentGenerator;
 import com.exabilan.interfaces.ExalangManager;
@@ -23,7 +24,7 @@ import com.exabilan.ui.model.PatientWithData;
 
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
 
-public class CoreFeatureProxy {
+public class CoreFeatureProxy implements FeatureProxy {
     private final ContentGenerator contentGenerator;
     private final FileGenerator fileGenerator;
     private final PatientDataParser patientDataParser;
