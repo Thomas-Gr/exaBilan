@@ -3,6 +3,7 @@ package com.exabilan.core;
 import static java.nio.file.Files.readAllLines;
 import static java.util.Optional.empty;
 import static java.util.stream.Collectors.joining;
+import static org.apache.commons.io.IOUtils.toInputStream;
 
 import java.io.File;
 import java.io.InputStream;
@@ -23,7 +24,6 @@ import com.exabilan.types.exalang.ExaLang;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMultimap;
 
-import org.apache.commons.io.IOUtils;
 import org.w3c.dom.Document;
 
 import javafx.util.Pair;
@@ -80,11 +80,11 @@ public class Exalang36DataRetriever implements DocumentPatientDataRetriever {
     @Override
     public Optional<Document> retrieveDocument(ExaLang exaLang) {
         try {
-            String asdasd = asdasd(readAllLines(
+            String fileDate = getFileData(readAllLines(
                     getFile(exaLang).toPath(),
                     ISO_CHARSET));
 
-            try (InputStream inputStream = IOUtils.toInputStream(asdasd, "UTF-8")) {
+            try (InputStream inputStream = toInputStream(fileDate, "UTF-8")) {
                 Document document = DocumentBuilderFactory.newInstance()
                         .newDocumentBuilder()
                         .parse(inputStream);
@@ -100,7 +100,7 @@ public class Exalang36DataRetriever implements DocumentPatientDataRetriever {
         }
     }
 
-    private String asdasd(List<String> strings) {
+    private String getFileData(List<String> strings) {
         String[] split = strings.stream()
                 .collect(joining("\n"))
                 .replaceAll("><", ">\n<")
