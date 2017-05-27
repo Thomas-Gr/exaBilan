@@ -16,7 +16,7 @@ import com.google.common.collect.ImmutableList;
 
 import org.junit.Test;
 
-public class JacksonExalangManagerTest extends TestBase {
+public class JacksonExalangManagerIntegrationTest extends TestBase {
 
     @Inject private ExalangManager exalangManager;
     @Inject @Named("exalangNames") private ImmutableList<String> exalangNames;
