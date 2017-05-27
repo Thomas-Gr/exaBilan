@@ -771,7 +771,7 @@
       "name" : "Phonologie",
       "questions" : [
         {
-          "number": 15,
+          "number": 14,
           "name": "Répétition de logatomes",
           "tests" : {
             "TROIS_ANS" : [
@@ -825,7 +825,7 @@
           }
         },
         {
-          "number": 14,
+          "number": 15,
           "name": "Dénomination phonologie",
           "tests" : {
             "TROIS_ANS" : [
