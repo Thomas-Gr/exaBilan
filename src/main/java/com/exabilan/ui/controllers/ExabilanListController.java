@@ -26,8 +26,8 @@ import javafx.application.Application;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.stage.FileChooser;
@@ -46,7 +46,7 @@ public class ExabilanListController extends ExabilanController<CoreFeatureProxy>
     @FXML private TableColumn<PatientWithData, String> lastNameColumn;
     @FXML private TableColumn<PatientWithData, String> dateColumn;
     @FXML private TableColumn<PatientWithData, String> softwareColumn;
-    @FXML private ComboBox<String> patientDate;
+    @FXML private ListView<String> patientDate;
     @FXML private Button generateBilan;
 
     @FXML
@@ -105,7 +105,7 @@ public class ExabilanListController extends ExabilanController<CoreFeatureProxy>
 
     private List<String> getBilans(PatientWithData newValue) {
         return newValue.getBilans().stream()
-                .map(bilan -> String.format("%s - %s", bilan.getNumber(), DISPLAY_DATE_HUMAN.apply(bilan.getDate())))
+                .map(bilan -> String.format("%s - Passation %s", DISPLAY_DATE_HUMAN.apply(bilan.getDate()), bilan.getNumber()))
                 .sorted(reverseOrder())
                 .collect(toList());
     }

@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.exabilan.ui.controllers.ExabilanListController">
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.exabilan.ui.controllers.ExabilanListController">
    <children>
       <SplitPane dividerPositions="0.3" minWidth="500.0" prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <items>
@@ -38,33 +38,21 @@
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
                         <Label text="Nom :" />
                         <Label text="Prénom :" GridPane.rowIndex="1" />
                         <Label text="Date de naissance :" GridPane.rowIndex="2" />
-                        <Label text="Nom du médecin :" GridPane.rowIndex="3" />
-                        <Label text="Genre :" GridPane.rowIndex="4" />
-                        <Label text="Date du bilan :" GridPane.rowIndex="5" />
+                        <Label text="Passation(s) :" GridPane.rowIndex="4" />
 
                         <Label fx:id="patientLastName" text="Aucun patient selectionné" GridPane.columnIndex="1" />
                         <Label fx:id="patientFirstName" text="Aucun patient selectionné" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                         <Label fx:id="patientBirthDate" text="Aucun patient selectionné" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                        <TextField fx:id="patientDoctor" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                        <ComboBox fx:id="patientSex" disable="true" prefHeight="27.0" prefWidth="301.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
-                         <items>
-                             <FXCollections fx:factory="observableArrayList">
-                                 <String fx:value="Homme" />
-                                 <String fx:value="Femme" />
-                             </FXCollections>
-                         </items>
-                        </ComboBox>
-                        <ComboBox fx:id="patientDate" disable="true" prefHeight="27.0" prefWidth="301.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                        <Button fx:id="generateBilan" disable="true" mnemonicParsing="false" onAction="#generateBilan" text="Générer bilan" GridPane.rowIndex="7" />
+                        <ListView fx:id="patientDate" prefHeight="300.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Button fx:id="generateBilan" disable="true" mnemonicParsing="false" onAction="#generateBilan" text="Générer bilan" GridPane.rowIndex="6" />
                      </children>
                   </GridPane>
                </children>
