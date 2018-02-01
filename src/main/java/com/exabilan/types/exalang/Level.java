@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 @JsonFormat(shape = JsonFormat.Shape.OBJECT)
 public enum Level {
     DEFAULT("undefined"),
-    UNKNOWN(""),
     TPSM("TPSM"),
     PSM("PSM"),
     MSM("MSM"),
@@ -32,8 +31,10 @@ public enum Level {
     }
 
     public static Level fromLevel(String value) {
+        String actualValue = value.isEmpty() ? "undefined" : value;
+
         for (Level level : values()) {
-            if (level.level.equals(value)) {
+            if (level.level.equals(actualValue)) {
                 return level;
             }
         }

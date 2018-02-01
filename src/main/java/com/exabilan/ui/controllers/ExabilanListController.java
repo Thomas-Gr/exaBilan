@@ -35,7 +35,7 @@ import javafx.stage.Stage;
 
 public class ExabilanListController extends ExabilanController<CoreFeatureProxy> {
 
-    private static final Pattern PATTERN = Pattern.compile("(.*) - (.*)");
+    private static final Pattern PATTERN = Pattern.compile("(.*) - Passation (.*)");
 
     @FXML private Label patientLastName;
     @FXML private Label patientFirstName;
@@ -78,12 +78,12 @@ public class ExabilanListController extends ExabilanController<CoreFeatureProxy>
         if (matcher.matches()) {
             PatientWithData selectedItem = patientList.getSelectionModel().getSelectedItem();
 
-            File file = chooseFile(selectedItem, matcher.group(2));
+            File file = chooseFile(selectedItem, matcher.group(1));
 
             if (file != null) {
                 String extension = getExtension(file.getName());
 
-                writeFile(selectedItem, parseInt(matcher.group(1)), file, extension.equals("doc"));
+                writeFile(selectedItem, parseInt(matcher.group(2)), file, extension.equals("doc"));
 
                 getDesktop().open(file);
             }
