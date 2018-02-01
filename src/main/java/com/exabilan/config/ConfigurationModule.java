@@ -41,7 +41,7 @@ public class ConfigurationModule extends AbstractModule {
         bind(ServiceAdapter.class).to(HttpServiceAdapter.class).asEagerSingleton();
         bindConstant().annotatedWith(named("zamzarKey")).to("xxxxxxxxxxxx");
         bindConstant().annotatedWith(named("apiEndPoint")).to("https://rw2m17t6vb.execute-api.eu-west-1.amazonaws.com/prod/");
-        bindConstant().annotatedWith(named("version")).to("1.0");
+        bindConstant().annotatedWith(named("version")).to("1.0.1");
     }
 
     @Provides @Singleton @Named("exalangNames")

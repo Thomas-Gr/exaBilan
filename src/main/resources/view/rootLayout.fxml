@@ -14,10 +14,15 @@
                </items>
           </Menu>
           <Menu fx:id="newVersionMenu" mnemonicParsing="false" text="Nouvelle version disponible !" visible="false">
-              <items>
-                  <MenuItem mnemonicParsing="false" text="Télécharger" />
-              </items>
-          </Menu>
+            <items>
+                <MenuItem mnemonicParsing="false" text="Télécharger" />
+            </items>
+        </Menu>
+        <Menu fx:id="surpriseMenu" mnemonicParsing="false" text="Surprise">
+            <items>
+                <MenuItem mnemonicParsing="false" text="Voir" />
+            </items>
+        </Menu>
         </menus>
       </MenuBar>
    </top>

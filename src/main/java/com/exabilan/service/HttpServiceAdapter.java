@@ -31,12 +31,23 @@ public class HttpServiceAdapter implements ServiceAdapter {
 
     @Override
     public VersionOutput getVersion(String currentVersion) {
-        try (CloseableHttpClient httpClient = getHttpClient();
-             CloseableHttpResponse response = httpClient.execute(new HttpGet(
-                     endPoint + "version?version=" + currentVersion))) {
+        try {
             return objectMapper.readValue(
-                    IOUtils.toString(response.getEntity().getContent(), UTF_8),
+                    getFromService("version?version=" + currentVersion),
                     VersionOutput.class);
+        } catch (IOException e) {
+             throw new RuntimeException(e);
+        }
+    }
+
+    @Override
+    public String getSurpriseContent() {
+        return getFromService("surprise");
+    }
+
+    private String getFromService(String path) {
+        try (CloseableHttpResponse response = getHttpClient().execute(new HttpGet(endPoint + path))) {
+            return IOUtils.toString(response.getEntity().getContent(), UTF_8);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

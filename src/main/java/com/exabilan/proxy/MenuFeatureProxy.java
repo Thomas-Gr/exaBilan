@@ -22,4 +22,8 @@ public class MenuFeatureProxy implements FeatureProxy {
         return serviceAdapter.getVersion(version);
     }
 
+    public String getSurpriseContent() {
+        return serviceAdapter.getSurpriseContent();
+    }
+
 }
