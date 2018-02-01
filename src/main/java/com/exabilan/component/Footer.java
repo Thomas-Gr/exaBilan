@@ -45,7 +45,7 @@ public class Footer implements HighLevelComponent {
                 .withParagraphStyle(ParagraphStyle.builder()
                         .alignment(RIGHT)
                         .build())
-                .addText(bilan.isHideConfidentialData() ? CONFIDENTIAL : bilan.getPatient().getFullName());
+                .addText(bilan.getOrthophoniste().getFullName());
 
         return ImmutableList.of(element, element2, element3, element4);
     }
