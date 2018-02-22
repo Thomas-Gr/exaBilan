@@ -10,9 +10,9 @@ import java.util.List;
 
 import javax.inject.Inject;
 
-import com.exabilan.core.DocumentConverter;
 import com.exabilan.interfaces.ConfigurationReader;
 import com.exabilan.interfaces.ContentGenerator;
+import com.exabilan.interfaces.DocumentConverter;
 import com.exabilan.interfaces.ExalangManager;
 import com.exabilan.interfaces.FileGenerator;
 import com.exabilan.interfaces.PatientDataParser;

@@ -1,6 +1,8 @@
 package com.exabilan.component;
 
 import static com.exabilan.component.helper.Helpers.displayNumber;
+import static com.exabilan.component.helper.Scores.computeZScore;
+import static com.exabilan.component.helper.Scores.getColor;
 import static com.exabilan.component.helper.Styles.BLUE;
 import static com.exabilan.component.helper.Styles.BLUE_2;
 import static com.exabilan.component.helper.Styles.CENTERED;
@@ -16,7 +18,6 @@ import java.util.Map;
 
 import javax.inject.Inject;
 
-import com.exabilan.component.helper.Styles;
 import com.exabilan.core.LevelGetter;
 import com.exabilan.interfaces.HighLevelComponent;
 import com.exabilan.interfaces.Section;
@@ -162,23 +163,5 @@ public class SummaryTable implements HighLevelComponent {
         return result.build();
     }
 
-    private double computeZScore(double result, Statistic statistic) {
-        double value = (result - statistic.getAverage()) / statistic.getEt();
 
-        if (statistic.isTime() || statistic.isReversed()) {
-            return -value;
-        }
-
-        return value;
-    }
-
-    private static Color getColor(double value) {
-        if (value < -2) {
-            return Styles.RED_2;
-        } else if (value < -1) {
-            return Styles.ORANGE;
-        } else {
-            return Styles.GREEN_2;
-        }
-    }
 }

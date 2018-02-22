@@ -7,7 +7,9 @@ import javax.inject.Named;
 import com.exabilan.component.Footer;
 import com.exabilan.component.Header;
 import com.exabilan.component.ResultList;
+import com.exabilan.component.ResultListTable;
 import com.exabilan.component.SummaryTable;
+import com.exabilan.core.CloudConvertDocumentConverter;
 import com.exabilan.core.JacksonExalangManager;
 import com.exabilan.core.ListWithTableDocument;
 import com.exabilan.core.SimpleConfigurationReader;
@@ -16,6 +18,7 @@ import com.exabilan.core.SimpleResultAssociator;
 import com.exabilan.core.XWPFFileGenerator;
 import com.exabilan.interfaces.ConfigurationReader;
 import com.exabilan.interfaces.ContentGenerator;
+import com.exabilan.interfaces.DocumentConverter;
 import com.exabilan.interfaces.ExalangManager;
 import com.exabilan.interfaces.FileGenerator;
 import com.exabilan.interfaces.HighLevelComponent;
@@ -32,6 +35,7 @@ public class ConfigurationModule extends AbstractModule {
 
     @Override
     public void configure() {
+        bind(DocumentConverter.class).to(CloudConvertDocumentConverter.class).asEagerSingleton();
         bind(FileGenerator.class).to(XWPFFileGenerator.class).asEagerSingleton();
         bind(ContentGenerator.class).to(ListWithTableDocument.class).asEagerSingleton();
         bind(PatientDataParser.class).to(SimplePatientDataParser.class).asEagerSingleton();
@@ -39,6 +43,7 @@ public class ConfigurationModule extends AbstractModule {
         bind(ResultAssociator.class).to(SimpleResultAssociator.class).asEagerSingleton();
         bind(ConfigurationReader.class).to(SimpleConfigurationReader.class).asEagerSingleton();
         bind(ServiceAdapter.class).to(HttpServiceAdapter.class).asEagerSingleton();
+        bindConstant().annotatedWith(named("cloudConvertKey")).to("xxxxxxxxxxxx");
         bindConstant().annotatedWith(named("zamzarKey")).to("xxxxxxxxxxxx");
         bindConstant().annotatedWith(named("apiEndPoint")).to("https://rw2m17t6vb.execute-api.eu-west-1.amazonaws.com/prod/");
         bindConstant().annotatedWith(named("version")).to("1.0.1");

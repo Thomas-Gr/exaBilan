@@ -12,6 +12,7 @@ import javax.inject.Inject;
 import javax.inject.Named;
 
 import com.exabilan.NetworkException;
+import com.exabilan.interfaces.DocumentConverter;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.auth.UsernamePasswordCredentials;
@@ -31,7 +32,7 @@ import org.json.JSONObject;
 
 import lombok.Value;
 
-public class DocumentConverter {
+public class ZamzarDocumentConverter implements DocumentConverter {
 
     private final String key;
 
@@ -39,10 +40,11 @@ public class DocumentConverter {
     private static final String ENCODING = "UTF-8";
 
     @Inject
-    public DocumentConverter(@Named("zamzarKey") String key) {
+    public ZamzarDocumentConverter(@Named("zamzarKey") String key) {
         this.key = key;
     }
 
+    @Override
     public void convertToDoc(File sourceFile, File targetFile) {
         try {
             long jobId = createDocument(sourceFile);
