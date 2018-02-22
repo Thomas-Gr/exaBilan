@@ -139,9 +139,9 @@ public class ExabilanListController extends ExabilanController<CoreFeatureProxy>
 
         fileChooser.setInitialFileName(String.format("%s - %s", selectedItem.getPatient().getFullName(), date));
         fileChooser.getExtensionFilters().add(
-                new FileChooser.ExtensionFilter("Fichiers word (*.docx)", "*.docx"));
-        fileChooser.getExtensionFilters().add(
                 new FileChooser.ExtensionFilter("Fichiers word (*.doc)", "*.doc"));
+        fileChooser.getExtensionFilters().add(
+                new FileChooser.ExtensionFilter("Fichiers word (*.docx)", "*.docx"));
 
         return fileChooser.showSaveDialog(stage);
     }
