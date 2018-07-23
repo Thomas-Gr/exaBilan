@@ -5,25 +5,4 @@
 <?import javafx.scene.layout.*?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="350.0" minWidth="500.0" prefHeight="450.0" prefWidth="900.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.exabilan.ui.controllers.ExabilanMenuController">
-   <top>
-      <MenuBar BorderPane.alignment="CENTER" styleClass="menu-bar">
-        <menus>
-          <Menu fx:id="aboutMenu" mnemonicParsing="false" text="Options">
-               <items>
-                  <MenuItem mnemonicParsing="false" text="A propos" />
-               </items>
-          </Menu>
-          <Menu fx:id="newVersionMenu" mnemonicParsing="false" text="Nouvelle version disponible !" visible="false">
-            <items>
-                <MenuItem mnemonicParsing="false" text="Télécharger" />
-            </items>
-        </Menu>
-        <Menu fx:id="surpriseMenu" mnemonicParsing="false" text="Surprise">
-            <items>
-                <MenuItem mnemonicParsing="false" text="Voir" />
-            </items>
-        </Menu>
-        </menus>
-      </MenuBar>
-   </top>
 </BorderPane>

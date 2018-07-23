@@ -45,7 +45,7 @@ public class GuiMain extends Application {
         primaryStage.setScene(new Scene(rootLayout));
         primaryStage.show();
 
-        primaryStage.setTitle("ExaBilan - v1.0.1");
+        primaryStage.setTitle("ExaBilan - v1.0.2");
         primaryStage.show();
     }
 
