@@ -2,12 +2,9 @@ package com.exabilan.config;
 
 import static com.google.inject.name.Names.named;
 
-import javax.inject.Named;
-
 import com.exabilan.component.Footer;
 import com.exabilan.component.Header;
 import com.exabilan.component.ResultList;
-import com.exabilan.component.ResultListTable;
 import com.exabilan.component.SummaryTable;
 import com.exabilan.core.CloudConvertDocumentConverter;
 import com.exabilan.core.JacksonExalangManager;
@@ -30,6 +27,7 @@ import com.google.common.collect.ImmutableList;
 import com.google.inject.AbstractModule;
 import com.google.inject.Provides;
 import com.google.inject.Singleton;
+import javax.inject.Named;
 
 public class ConfigurationModule extends AbstractModule {
 

@@ -1,17 +1,8 @@
 package com.exabilan.core;
 
+import static com.google.common.collect.Maps.immutableEntry;
 import static java.util.Arrays.stream;
 import static java.util.stream.Collectors.joining;
-import static com.google.common.collect.Maps.immutableEntry;
-
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.util.List;
-import java.util.Map.Entry;
-import java.util.Optional;
-
-import javax.inject.Inject;
-
 import com.exabilan.interfaces.PatientDataParser;
 import com.exabilan.interfaces.ResultAssociator;
 import com.exabilan.types.exalang.Answer;
@@ -23,11 +14,18 @@ import com.exabilan.types.exalang.Results;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableMultimap;
-
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
+
+import javax.inject.Inject;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.List;
+import java.util.Map.Entry;
+import java.util.NoSuchElementException;
+import java.util.Optional;
 
 public class SimplePatientDataParser implements PatientDataParser {
 
@@ -41,7 +39,7 @@ public class SimplePatientDataParser implements PatientDataParser {
     private static String REPONSE = "Reponse";
     private static String CLASSE = "classe";
 
-    private static DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy"); // format used by exalang when storing dates
+    private static DateTimeFormatter formatter = DateTimeFormatter.ofPattern("d/M/yyyy"); // format used by exalang when storing dates
 
     private final ResultAssociator resultAssociator;
     private final ParserBinder parserBinder;
@@ -111,7 +109,11 @@ public class SimplePatientDataParser implements PatientDataParser {
         ImmutableMap.Builder<Question, List<Answer>> builder = ImmutableMap.builder();
 
         for (int k = 0; k < testList.getLength(); k++) {
-            builder.put(generateAnsweredQuestion(exaLang, testList.item(k), k + 1));
+            try {
+                builder.put(generateAnsweredQuestion(exaLang, testList.item(k), k + 1));
+            } catch (NoSuchElementException e) {
+                // Ignore: Missing new files in 8-11
+            }
         }
 
         return builder.build();
@@ -139,8 +141,16 @@ public class SimplePatientDataParser implements PatientDataParser {
     }
 
     private static LocalDate transformToLocalDate(String date) {
+        final String formattedDate;
+
+        if (date.indexOf(' ') > 0) {
+            formattedDate = date.substring(0, date.indexOf(' '));
+        } else {
+            formattedDate = date;
+        }
+
         try {
-            return LocalDate.parse(date, formatter);
+            return LocalDate.parse(formattedDate, formatter);
         } catch (Exception e) {
             return LocalDate.parse("01/01/1900", formatter);
         }
